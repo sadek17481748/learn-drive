@@ -1,26 +1,32 @@
- /* ================= Body ================= */ 
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f9f9f9;
-  padding-top: 80px;
-} 
-
-h1, h2, h3, h4, h5, h6 {
+/* ================= Body ================= */ 
+/* Sets the default font, background colour, and top padding 
+   to prevent content from being hidden behind a fixed navbar */
+   body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    padding-top: 80px;
+  } 
+  
+  /* ================= Headings ================= */ 
+  /* Applies a separate serif font to all headings for hierarchy and readability */
+  h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', serif;
   } 
-
+  
+  /* ================= Navigation ================= */ 
+  /* Changes nav-link colour on hover to provide visual feedback */
   .nav-link:hover {
     color: #ffc107 !important;
   }
   
-  /* ================= FOOTER ================= */  
+  /* ================= Footer ================= */  
+  /* Base footer styling: dark background and light text */
   footer {
     background-color: #1a1a1a;
     color: #ddd;
   } 
-
-
+  
+  /* Footer layout container to align multiple columns responsively */
   footer .footer-container {
     display: flex;
     flex-wrap: wrap;
@@ -29,42 +35,51 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 1200px;
     margin: auto;
   } 
-
+  
+  /* Individual footer column styling to allow flexible content distribution */
   footer .footer-column {
     flex: 1 1 200px;
     margin: 10px;
   } 
-
+  
+  /* Footer heading styling for better visual hierarchy */
   footer h5 {
     font-weight: 600;
     margin-bottom: 15px;
   }  
-
+  
+  /* Footer text and links sizing for readability */
   footer p, footer a {
     font-size: 0.9rem;
     line-height: 1.5;
   }  
-
+  
+  /* Footer link base colour and text decoration */
   footer a {
     color: #ccc;
     text-decoration: none;
   } 
-
+  
+  /* Footer link hover effect for better user feedback */
   footer a:hover {
     color: #fff;
     text-decoration: underline;
   }  
-
+  
+  /* ================= Social Icons ================= */ 
+  /* Styles for social media icons in footer */
   .social-icons a {
     color: #ccc;
     margin-right: 15px;
     font-size: 1.3rem;
     transition: color 0.3s;
-  } 
-
+  }
+  
+  /* Social icons hover effect to improve interactivity */
   .social-icons a:hover {
     color: #fff;
   }
+  
   
   
 
