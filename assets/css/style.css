@@ -29,7 +29,18 @@
 }
 .card:hover {
     transform: scale(1.05);
+} 
+
+/* ================= BUTTONS ================= */
+.btn-dark {
+    background-color: #222;
+    border: none;
 }
+.btn-dark:hover {
+    background-color: #ffcc00;
+    color: #222;
+}
+
 
 
   
