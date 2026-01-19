@@ -37,61 +37,97 @@
     </header> 
       
     <main class="container my-5 pt-3">
-        <h2 class="text-center">Practice Quiz</h2>
-      </main> 
-      <div class="progress">
-        <div id="quizProgress" class="progress-bar bg-dark" style="width:0%">0%</div>
-      </div> 
-      <div id="quizContainer"></div>
-<div id="quizResult"></div> 
-<div class="text-center my-3">
-    <button class="btn btn-primary" onclick="restartQuiz()">Restart Quiz</button>
-  </div> 
-  <div class="text-center my-4">
-    <h2>Hazard Perception</h2>
-  </div> 
-  <div class="video-card">
-    <div id="hazardVideoContainer" class="video-container">
-      <video id="hazardVideo" width="100%" controls>
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div> 
-  <div class="mt-3">
-    <button id="nextHazardBtn" class="btn btn-primary">Next Video</button>
-  </div> 
-  <p class="mt-2" id="hazardScoreDisplay">Hazard Perception Score: 0</p> 
-  <p class="mt-1" id="hazardVideoCount">Video 1 of 8</p> 
-  <!-- Practice Quiz Section -->
-<h2 class="text-center">Practice Quiz</h2>
-<!-- Progress bar shows quiz completion -->
-<div class="progress">
-  <div id="quizProgress" class="progress-bar bg-dark" style="width:0%">0%</div>
-</div>
-<!-- Container for quiz questions -->
-<div id="quizContainer"></div>
-<!-- Container for quiz results -->
-<div id="quizResult"></div> 
-<!-- Hazard Perception Section -->
-<div class="text-center my-4">
-    <h2>Hazard Perception</h2>
-    <div class="video-card">
-      <!-- Video container -->
-      <div id="hazardVideoContainer" class="video-container">
-        <video id="hazardVideo" width="100%" controls>
-          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-        </video>
-      </div>
-      <!-- Next video button -->
-      <div class="mt-3">
-        <button id="nextHazardBtn" class="btn btn-primary">Next Video</button>
-      </div>
-      <!-- Score display -->
-      <p class="mt-2" id="hazardScoreDisplay">Hazard Perception Score: 0</p>
-      <!-- Video counter -->
-      <p class="mt-1" id="hazardVideoCount">Video 1 of 8</p>
-    </div>
-  </div>
+        <!-- 'container' (Bootstrap) centers content and provides responsive padding -->
+        <!-- 'my-5' adds vertical margin (top & bottom) of 3rem -->
+        <!-- 'pt-3' adds top padding of 1rem -->
+      
+        <!-- ================== Practice Quiz Section ================== -->
+        <h2 class="text-center">
+          <!-- 'text-center' (Bootstrap) horizontally centers the heading -->
+          Practice Quiz
+        </h2>
+      
+        <!-- Quiz Progress Bar -->
+        <div class="progress">
+          <!-- 'progress' (Bootstrap) provides a styled container for a progress bar -->
+          <div id="quizProgress" class="progress-bar bg-dark" style="width:0%">
+            <!-- 'progress-bar' (Bootstrap) represents the filled portion -->
+            <!-- 'bg-dark' sets the background colour to dark using Bootstrap -->
+            <!-- Inline style 'width:0%' initializes the bar at 0% -->
+            0%
+            <!-- The inner text shows the percentage of quiz completion -->
+          </div>
+        </div>
+      
+        <!-- Container for dynamic quiz questions -->
+        <div id="quizContainer"></div>
+        <!-- Will be populated by JavaScript with questions and options -->
+      
+        <!-- Container to show quiz results after completion -->
+        <div id="quizResult"></div>
+      
+        <!-- Restart Quiz Button -->
+        <div class="text-center my-3">
+          <!-- 'text-center' centers the button horizontally -->
+          <!-- 'my-3' adds vertical spacing above & below -->
+          <button class="btn btn-primary" onclick="restartQuiz()">
+            <!-- 'btn' and 'btn-primary' are Bootstrap classes for styling -->
+            <!-- 'onclick' triggers restartQuiz() function when clicked -->
+            Restart Quiz
+          </button>
+        </div>
+      
+        <!-- ================== Hazard Perception Section ================== -->
+        <div class="text-center my-4">
+          <!-- 'text-center' centers the section content -->
+          <!-- 'my-4' adds top & bottom margin for spacing -->
+          <h2>Hazard Perception</h2>
+      
+          <!-- Video Card Container -->
+          <div class="video-card">
+            <!-- You can style .video-card in CSS for borders, shadows, etc. -->
+      
+            <!-- Video Container -->
+            <div id="hazardVideoContainer" class="video-container">
+              <!-- 'video-container' class can control max-width, aspect ratio, etc. -->
+      
+              <!-- HTML5 Video Element -->
+              <video id="hazardVideo" width="100%" controls>
+                <!-- 'width=100%' makes video responsive to container width -->
+                <!-- 'controls' adds native play/pause, volume, and fullscreen buttons -->
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                <!-- 'source' element specifies the video URL and MIME type -->
+                Your browser does not support the video tag.
+                <!-- Fallback message for unsupported browsers -->
+              </video>
+            </div>
+      
+            <!-- Next Video Button -->
+            <div class="mt-3">
+              <!-- 'mt-3' adds top margin spacing -->
+              <button id="nextHazardBtn" class="btn btn-primary">
+                <!-- 'btn' and 'btn-primary' style the button using Bootstrap -->
+                Next Video
+              </button>
+            </div>
+      
+            <!-- Hazard Perception Score Display -->
+            <p class="mt-2" id="hazardScoreDisplay">
+              <!-- 'mt-2' adds small top margin -->
+              Hazard Perception Score: 0
+              <!-- Will update dynamically via JavaScript as user interacts with videos -->
+            </p>
+      
+            <!-- Hazard Video Count -->
+            <p class="mt-1" id="hazardVideoCount">
+              <!-- 'mt-1' adds minimal top margin -->
+              Video 1 of 8
+              <!-- Shows current video number and total; updates with JS -->
+            </p>
+          </div>
+        </div>
+      </main>
+      
   
 
 
