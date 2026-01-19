@@ -11,7 +11,19 @@
   /* Applies a separate serif font to all headings for hierarchy and readability */
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', serif;
-  } 
+  }  
+
+  /* ================= FULL HEIGHT LAYOUT ================= */
+html, body {
+    height: 100%;          /* Make body fill the viewport height */
+    display: flex;         /* Use flex layout */
+    flex-direction: column; /* Stack header/main/footer vertically */
+}
+
+main {
+    flex: 1;               /* Main content expands to fill remaining space */
+}
+
   
   /* ================= Navigation ================= */ 
   /* Changes nav-link colour on hover to provide visual feedback */
