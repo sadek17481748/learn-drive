@@ -38,7 +38,15 @@ h1, h2, h3, h4, h5, h6 {
   footer h5 {
     font-weight: 600;
     margin-bottom: 15px;
+  }  
+
+  footer p, footer a {
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
+  
+
+
   
 
   
