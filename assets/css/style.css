@@ -45,7 +45,13 @@
 .marked {
     background-color: #28a745 !important;
     color: white !important;
+} 
+
+/* ================= FORMS ================= */
+input, select, textarea {
+    border-radius: 6px;
 }
+
 
 
 
