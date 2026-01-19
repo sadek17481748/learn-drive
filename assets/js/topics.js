@@ -14,4 +14,5 @@ filterSelect.addEventListener('change', () => {
       }
     });
   });
-  
+  // Select all 'Mark as Revised' buttons
+const markButtons = document.querySelectorAll('.mark-btn');
