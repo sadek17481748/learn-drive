@@ -21,7 +21,16 @@
 
   .accordion-button:focus {
     box-shadow: none;
+} 
+
+/* ================= CARDS ================= */
+.card {
+    transition: transform 0.3s;
 }
+.card:hover {
+    transform: scale(1.05);
+}
+
 
   
   /* ================= Footer ================= */  
