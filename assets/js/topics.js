@@ -16,3 +16,14 @@ filterSelect.addEventListener('change', () => {
   });
   // Select all 'Mark as Revised' buttons
 const markButtons = document.querySelectorAll('.mark-btn');
+// When user clicks 'Mark as Revised', highlight topic and disable button
+markButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const body = e.target.closest('.accordion-body');
+      body.style.backgroundColor = '#d4edda';
+      body.style.transition = 'background-color 0.5s';
+      e.target.textContent = 'Revised';
+      e.target.disabled = true;
+    });
+  });
+  
