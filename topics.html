@@ -63,43 +63,78 @@
         <option value="other">Other Topics</option>
       </select>
     </div>
-    
+    <!-- ===== Accordion Item: Road Signs ===== -->
+<!-- Each accordion item represents a topic category -->
+<div class="accordion-item" data-category="road-signs">
+
+    <!-- Accordion Header -->
+    <!-- Header contains a button that toggles the collapsible content -->
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button collapsed" type="button"
+              data-bs-toggle="collapse"            <!-- Bootstrap: toggles collapse -->
+              data-bs-target="#collapseOne"       <!-- Targets the content div -->
+              aria-expanded="false"               <!-- Accessibility: initial state collapsed -->
+              aria-controls="collapseOne">        <!-- Accessibility: links to content -->
+        Road Signs
+      </button>
+    </h2>
+  
+    <!-- Accordion Collapsible Content -->
+    <!-- This content is hidden by default and expands when the button is clicked -->
+    <!-- data-bs-parent="#topicsList" ensures only one item opens at a time in the accordion -->
+    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#topicsList">
+  
+      <!-- Accordion Body: Actual Content -->
+      <div class="accordion-body">
+  
+        <!-- Introductory Paragraphs -->
+        <p>
+          Road signs provide essential guidance, warnings, and regulations to ensure safe and smooth traffic flow. 
+          Understanding them quickly is crucial for learner drivers.
+        </p>
+        <p>
+          Signs vary by shape, colour, and symbols. For example, triangular signs warn of hazards, 
+          circular signs provide orders, and rectangular signs give information.
+        </p>
+        <p>
+          Regular revision of signs helps build quick recognition and reduces reaction time in real driving situations.
+        </p>
+        <p>See below a link to the DVLA official signs for practice:</p> 
+  
+        <!-- External Link to PDF -->
+        <!-- target="_blank" opens in new tab -->
+        <!-- rel="noopener noreferrer" improves security on external links -->
+        <p>
+          Download the official traffic signs guide: 
+          <a href="https://assets.publishing.service.gov.uk/media/560aa95b40f0b6036a00002a/the-highway-code-traffic-signs.pdf" 
+             target="_blank" rel="noopener noreferrer">
+            The Highway Code – Traffic Signs (PDF)
+          </a>
+        </p>
+  
+        <!-- List of Sign Types -->
+        <!-- Explains different categories of road signs -->
+        <ul>
+          <li><strong>Warning:</strong> Triangular, yellow background, alert to hazards.</li>
+          <li><strong>Regulatory:</strong> Circular, white/red or blue, instructs what to do or not do.</li>
+          <li><strong>Informational:</strong> Rectangular, provides guidance, directions, or facilities.</li>
+        </ul>
+  
+        <!-- Mark as Revised Button -->
+        <!-- Users can mark a topic as revised; JS changes color and disables the button -->
+        <button class="btn btn-dark mark-btn mt-2">
+          Mark as Revised
+        </button>
+  
+      </div>
+    </div>
+  </div>
+  
 
     <!-- ===== TOPICS ACCORDION LIST ===== -->
     <div id="topicsList" class="accordion" aria-label="Topics Accordion">
 
-      <!-- Road Signs -->
-    <div class="accordion-item" data-category="road-signs">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button collapsed" type="button"
-                  data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                  aria-expanded="false" aria-controls="collapseOne">
-            Road Signs
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#topicsList">
-          <div class="accordion-body">
-            <p>Road signs provide essential guidance, warnings, and regulations to ensure safe and smooth traffic flow. Understanding them quickly is crucial for learner drivers.</p>
-            <p>Signs vary by shape, colour, and symbols. For example, triangular signs warn of hazards, circular signs provide orders, and rectangular signs give information.</p>
-            <p>Regular revision of signs helps build quick recognition and reduces reaction time in real driving situations.</p> 
-            <p>See below a link to the DVLA official signs for practice</p> 
-            <p>
-              Download the official traffic signs guide: 
-              <a href="https://assets.publishing.service.gov.uk/media/560aa95b40f0b6036a00002a/the-highway-code-traffic-signs.pdf" target="_blank" rel="noopener noreferrer">
-                The Highway Code – Traffic Signs (PDF)
-              </a>
-            </p>
-            
-            <ul>
-              <li>Warning: Triangular, yellow background, alert to hazards.</li>
-              <li>Regulatory: Circular, white/red or blue, instructs what to do or not do.</li>
-              <li>Informational: Rectangular, provides guidance, directions, or facilities.</li>
-            </ul>
-            <button class="btn btn-dark mark-btn mt-2">Mark as Revised</button>
-          </div>
-        </div>
-      </div>
-  
+      
       <!-- Hazard Perception -->
       <div class="accordion-item" data-category="hazards">
         <h2 class="accordion-header" id="headingTwo">
