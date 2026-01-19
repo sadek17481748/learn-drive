@@ -41,6 +41,18 @@ markButtons.forEach(btn => {
     e.target.disabled = true;
   });
 });
+*/ 
+
+// BUG: Filtering does not collapse open accordions
+// SOLUTION: Close all accordion items when applying filter
+/*
+accordionItems.forEach(item => {
+  const collapse = item.querySelector('.accordion-collapse');
+  if (collapse.classList.contains('show')) {
+    collapse.classList.remove('show');
+  }
+});
 */
+
 
   
