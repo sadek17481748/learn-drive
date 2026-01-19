@@ -17,7 +17,12 @@
   /* Changes nav-link colour on hover to provide visual feedback */
   .nav-link:hover {
     color: #ffc107 !important;
-  }
+  } 
+
+  .accordion-button:focus {
+    box-shadow: none;
+}
+
   
   /* ================= Footer ================= */  
   /* Base footer styling: dark background and light text */
