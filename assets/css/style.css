@@ -18,7 +18,24 @@ h1, h2, h3, h4, h5, h6 {
   footer {
     background-color: #1a1a1a;
     color: #ddd;
+  } 
+
+
+  footer .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: auto;
+  } 
+
+  footer .footer-column {
+    flex: 1 1 200px;
+    margin: 10px;
   }
+  
+  
 
   
   
