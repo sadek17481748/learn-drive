@@ -25,5 +25,22 @@ markButtons.forEach(btn => {
       e.target.textContent = 'Revised';
       e.target.disabled = true;
     });
+  }); 
+
+  // BUG: Rapid clicking skips background transition
+// SOLUTION: Delay background color to ensure transition triggers
+/*
+markButtons.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    const body = e.target.closest('.accordion-body');
+    setTimeout(() => {
+      body.style.backgroundColor = '#d4edda';
+    }, 50);
+    body.style.transition = 'background-color 0.5s';
+    e.target.textContent = 'Revised';
+    e.target.disabled = true;
   });
+});
+*/
+
   
