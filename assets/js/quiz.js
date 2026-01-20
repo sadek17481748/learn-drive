@@ -186,7 +186,50 @@ let currentHazardIndex = 0;
 let totalScore = 0; // DVSA-style hazard score
 let clicksThisVideo = 0; // Count clicks per video
 let validClickRecorded = false; // Prevent multiple valid clicks per hazard
-
+// ================== LOAD HAZARD VIDEO FUNCTION ==================
+// Loads a hazard video, handles end of video sequence, and calculates overall results
+function loadHazardVideo(index) {
+    // If all videos completed, show final results
+    if (index >= hazardVideos.length) {
+      video.style.display = "none";
+      nextBtn.style.display = "none";
+      videoCount.textContent = "";
+  
+      const quizScore = parseInt(localStorage.getItem("practiceQuizScore")) || 0;
+      const quizMax = quizQuestions.length;
+      const hazardMax = hazardVideos.length * 5; // Max 5 points per hazard
+  
+      const totalMax = quizMax + hazardMax;
+      const combined = quizScore + totalScore;
+      const percentage = Math.round((combined / totalMax) * 100);
+  
+      const passed = percentage >= 80;
+  
+      // Display combined quiz + hazard results
+      scoreDisplay.innerHTML = `
+        <h4>Final Result</h4>
+        <p>Quiz: ${quizScore} / ${quizMax}</p>
+        <p>Hazard: ${totalScore} / ${hazardMax}</p>
+        <h5>Overall: ${percentage}%</h5>
+        <h5 style="color:${passed ? "green" : "red"}">
+          ${passed ? "PASS ✅" : "FAIL ❌ (80% required)"}
+        </h5>
+      `;
+      return;
+    }
+  
+    // Load the next hazard video
+    const v = hazardVideos[index];
+    video.src = v.src;
+    video.currentTime = 0;
+    video.play();
+  
+    // Reset click tracking for this video
+    clicksThisVideo = 0;
+    validClickRecorded = false;
+    videoCount.textContent = `Video ${index + 1} of ${hazardVideos.length}`;
+  }
+  
   
   
   
