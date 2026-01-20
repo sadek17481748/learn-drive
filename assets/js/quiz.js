@@ -137,7 +137,30 @@ function updateProgress() {
     const perc = (quizIndex / quizQuestions.length) * 100;
     document.getElementById("quizProgress").style.width = perc + "%";
     document.getElementById("quizProgress").textContent = Math.round(perc) + "%";
+  } 
+
+  // ================= RESTART QUIZ =================
+// Resets the quiz and hazard perception data to allow re-taking
+function restartQuiz() {
+    // Reset quiz variables
+    quizScore = 0;
+    quizIndex = 0;
+    localStorage.removeItem("practiceQuizScore");
+  
+    // Reset hazard perception tracking variables
+    currentHazardIndex = 0;
+    totalScore = 0;
+    clicksThisVideo = 0;
+    validClickRecorded = false;
+  
+    // Shuffle questions and render the first one
+    shuffle(quizQuestions);
+    renderQuestion();
+  
+    // Reset hazard perception video to first video
+    loadHazardVideo(0);
   }
+  
   
   
   
