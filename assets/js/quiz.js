@@ -230,6 +230,33 @@ function loadHazardVideo(index) {
     videoCount.textContent = `Video ${index + 1} of ${hazardVideos.length}`;
   }
   
+  // ================== VIDEO CLICK EVENT ==================
+// Detect user clicks on the video and score them based on timing
+video.addEventListener("click", () => {
+    // Prevent spamming and only allow one valid click per hazard
+    if (clicksThisVideo >= 8 || validClickRecorded) return;
+  
+    clicksThisVideo++;
+  
+    const time = video.currentTime;
+    const hazard = hazardVideos[currentHazardIndex];
+  
+    // Check if click falls within the hazard window
+    if (time >= hazard.hazardStart && time <= hazard.hazardEnd) {
+      const window = hazard.hazardEnd - hazard.hazardStart;
+      const reaction = time - hazard.hazardStart;
+  
+      // Assign points based on reaction time
+      let points = 1;
+      if (reaction <= window * 0.2) points = 5;
+      else if (reaction <= window * 0.4) points = 4;
+      else if (reaction <= window * 0.6) points = 3;
+      else if (reaction <= window * 0.8) points = 2;
+  
+      totalScore += points;
+      validClickRecorded = true;
+    }
+  });
   
   
   
