@@ -85,8 +85,32 @@ function renderQuestion() {
     document.getElementById("quizContainer").innerHTML = html;
   
     // Update the progress bar
-    updateProgress();
+    updateProgress(); 
+  } 
+  // ================= HANDLE ANSWER =================
+// Called when a user clicks an answer button
+function answerQuiz(btn, ans) {
+
+    // Disable all option buttons after selection
+    const buttons = document.querySelectorAll(".btn-option");
+    buttons.forEach(b => {
+      b.disabled = true;
+  
+      // Highlight the correct answer
+      if (b.textContent === ans) b.classList.add("correct");
+    });
+  
+    // Increment score if the selected answer is correct
+    if (btn.textContent === ans) quizScore++;
+    else btn.classList.add("incorrect"); // Otherwise mark wrong button
+  
+    // Wait briefly and then render next question
+    setTimeout(() => {
+      quizIndex++;
+      renderQuestion();
+    }, 500);
   }
+  
   
 
 
