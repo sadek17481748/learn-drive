@@ -256,7 +256,14 @@ video.addEventListener("click", () => {
       totalScore += points;
       validClickRecorded = true;
     }
+  }); 
+  // ================== NEXT VIDEO BUTTON ==================
+// Moves to the next hazard video when user clicks 'Next Video'
+nextBtn.addEventListener("click", () => {
+    currentHazardIndex++;
+    loadHazardVideo(currentHazardIndex);
   });
+  
   
   
   
