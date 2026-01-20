@@ -169,7 +169,10 @@ function shuffle(arr) {
     }
   }
   
-  
+  // ===== INITIALISE QUIZ =====
+// Render the first question immediately on page load
+renderQuestion();
+
   
   
   
