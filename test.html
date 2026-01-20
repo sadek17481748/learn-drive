@@ -179,20 +179,24 @@
 
 <script> 
 
-//  Button always sends same value
+
+//  Reads element instead of its value
 
 document.getElementById("answerBtn").addEventListener("click", function () {
-  checkAnswer("Stop"); // Always sends Stop
+  const input = document.getElementById("userAnswer");
+  checkAnswer(input); // Should be input.value
 });
-// User choices ignored
-function checkAnswer(userAnswer) {
-  const correctAnswer = "Stop"; // always submits stop
 
-  if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+function checkAnswer(userAnswer) {
+  const correctAnswer = "Stop";
+
+  if (userAnswer === correctAnswer) {
     console.log("Correct");
   } else {
     console.log("Incorrect");
   }
+}
+
 }
 
 
