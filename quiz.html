@@ -1,182 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
-    \
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>  
-    <!-- Bootstrap CSS -->
-    <link
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-  rel="stylesheet"/>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LearnDrive | Practice Quiz</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
- 
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-/>
-<!-- link to css -->
-<link rel="stylesheet" href="assets/css/style.css" />
+<!-- ================= BOOTSTRAP CSS ================= -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+<!-- ================= GOOGLE FONTS ================= -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+
+<!-- ================= FONT AWESOME ================= -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous"/>
+
+<style>
+/* ================= GLOBAL STYLES ================= */
+html, body {
+    height: 100%; /* Needed for flex layout to allow sticky footer */
+    margin: 0; 
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #f8f9fa;
+    display: flex;           /* Flex container to allow footer positioning */
+    flex-direction: column;  /* Column layout: header, main, footer */
+}
+
+/* ================= MAIN CONTENT ================= */
+main {
+    flex: 1;                 /* Fills remaining vertical space, pushing footer down */
+    margin-top: 70px;        /* Space for fixed navbar */
+}
+
+/* ================= QUIZ CARD STYLES ================= */
+.quiz-card {
+    padding: 25px;
+    margin-bottom: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.btn-option {
+    width: 100%;
+    margin: 5px 0;
+    text-align: left;
+}
+
+.btn-option.correct {
+    background-color: green;
+    color: white;
+}
+
+.btn-option.incorrect {
+    background-color: red;
+    color: white;
+}
+
+.progress {
+    height: 20px;
+    margin-bottom: 15px;
+}
+
+#quizResult {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.quiz-img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
+
+/* ================= HAZARD VIDEO ================= */
+.video-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    /* Footer styling */
+    background: #212529;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* Ensures footer stays at bottom in flex layout */
+}
+</style>
 </head>
 
-<body>   
-    <!-- ================= NAVBAR ================= -->
-    <header class="fixed-top bg-dark text-white p-3">
-        <div class="container d-flex justify-content-between align-items-center">
-          <!-- Site branding -->
-          <h1 class="h4 mb-0">LearnDrive</h1>
-          <!-- Navigation links -->
-          <nav>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="fixed-top bg-dark text-white p-3">
+    <div class="container d-flex justify-content-between align-items-center">
+        <!-- Logo / Site Name -->
+        <h1 class="h4 mb-0">LearnDrive</h1>
+        <!-- Navigation Links -->
+        <nav>
             <a href="index.html" class="text-white me-3">Home</a>
             <a href="topics.html" class="text-white me-3">Topics</a>
             <a href="quiz.html" class="text-white">Quiz</a>
-          </nav>
-        </div>
-    </header> 
-      
-    <main class="container my-5 pt-3">
-        <!-- 'container' (Bootstrap) centers content and provides responsive padding -->
-        <!-- 'my-5' adds vertical margin (top & bottom) of 3rem -->
-        <!-- 'pt-3' adds top padding of 1rem -->
-      
-        <!-- ================== Practice Quiz Section ================== -->
-        <h2 class="text-center">
-          <!-- 'text-center' (Bootstrap) horizontally centers the heading -->
-          Practice Quiz
-        </h2>
-      
-        <!-- Quiz Progress Bar -->
-        <div class="progress">
-          <!-- 'progress' (Bootstrap) provides a styled container for a progress bar -->
-          <div id="quizProgress" class="progress-bar bg-dark" style="width:0%">
-            <!-- 'progress-bar' (Bootstrap) represents the filled portion -->
-            <!-- 'bg-dark' sets the background colour to dark using Bootstrap -->
-            <!-- Inline style 'width:0%' initializes the bar at 0% -->
-            0%
-            <!-- The inner text shows the percentage of quiz completion -->
-          </div>
-        </div>
-      
-        <!-- Container for dynamic quiz questions -->
-        <div id="quizContainer"></div>
-        <!-- Will be populated by JavaScript with questions and options --> 
+        </nav>
+    </div>
+</header>
 
-        <!-- QUESTIONS -->  
-         <!-- removed questions that used radio function due to not meeting UX requirements
-          will replace with a dynamic option with better usabillity and interaction --> 
-        <!-- Question 1 -->
-    <!-- <div class="mb-4">
-        <h5>1. What does a red octagon sign indicate?</h5>
-        <div>
-          <input type="radio" name="q1" value="Stop" id="q1a" /><label for="q1a"> Stop</label><br>
-          <input type="radio" name="q1" value="Yield" id="q1b" /><label for="q1b"> Yield</label><br>
-          <input type="radio" name="q1" value="Do Not Enter" id="q1c" /><label for="q1c"> Do Not Enter</label><br>
-        </div>
-      </div> -->
+<!-- ================= MAIN CONTENT ================= -->
+<main class="container my-5 pt-3">
 
-    
+    <!-- ================= QUIZ HEADER ================= -->
+    <h2 class="text-center">Practice Quiz</h2>
 
-  
+    <!-- ================= PROGRESS BAR ================= -->
+    <div class="progress">
+        <div id="quizProgress" class="progress-bar bg-dark" style="width:0%">0%</div>
+    </div>
 
+    <!-- ================= QUIZ CARD CONTAINER ================= -->
+    <div id="quizContainer"></div>
 
-        <!-- Container to show quiz results after completion -->
-        <div id="quizResult"></div>
-      
-        <!-- Restart Quiz Button -->
-        <div class="text-center my-3">
-          <!-- 'text-center' centers the button horizontally -->
-          <!-- 'my-3' adds vertical spacing above & below -->
-          <button class="btn btn-primary" onclick="restartQuiz()">
-            <!-- 'btn' and 'btn-primary' are Bootstrap classes for styling -->
-            <!-- 'onclick' triggers restartQuiz() function when clicked -->
-            Restart Quiz
-          </button>
-        </div>
-      
-        <!-- ================== Hazard Perception Section ================== -->
-        <div class="text-center my-4">
-          <!-- 'text-center' centers the section content -->
-          <!-- 'my-4' adds top & bottom margin for spacing -->
-          <h2>Hazard Perception</h2>
-      
-          <!-- Video Card Container -->
-          <div class="video-card">
-            <!-- You can style .video-card in CSS for borders, shadows, etc. -->
-      
-            <!-- Video Container -->
+    <!-- ================= QUIZ RESULT ================= -->
+    <div id="quizResult"></div>
+
+    <!-- ================= RESTART QUIZ BUTTON ================= -->
+    <div class="text-center my-3">
+        <button class="btn btn-primary" onclick="restartQuiz()">Restart Quiz</button>
+    </div> 
+
+    <!-- ================= HAZARD PERCEPTION ================= -->
+    <div class="text-center my-4">
+        <h2>Hazard Perception</h2>
+        <div class="video-card">
             <div id="hazardVideoContainer" class="video-container">
-              <!-- 'video-container' class can control max-width, aspect ratio, etc. -->
-      
-              <!-- HTML5 Video Element -->
-              <video id="hazardVideo" width="100%" controls>
-                <!-- 'width=100%' makes video responsive to container width -->
-                <!-- 'controls' adds native play/pause, volume, and fullscreen buttons -->
-                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                <!-- 'source' element specifies the video URL and MIME type -->
-                Your browser does not support the video tag.
-                <!-- Fallback message for unsupported browsers -->
-              </video>
+                <video id="hazardVideo" width="100%" controls>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                </video>
             </div>
-      
-            <!-- Next Video Button -->
             <div class="mt-3">
-              <!-- 'mt-3' adds top margin spacing -->
-              <button id="nextHazardBtn" class="btn btn-primary">
-                <!-- 'btn' and 'btn-primary' style the button using Bootstrap -->
-                Next Video
-              </button>
+                <button id="nextHazardBtn" class="btn btn-primary">Next Video</button>
             </div>
-      
-            <!-- Hazard Perception Score Display -->
-            <p class="mt-2" id="hazardScoreDisplay">
-              <!-- 'mt-2' adds small top margin -->
-              Hazard Perception Score: 0
-              <!-- Will update dynamically via JavaScript as user interacts with videos -->
-            </p>
-      
-            <!-- Hazard Video Count -->
-            <p class="mt-1" id="hazardVideoCount">
-              <!-- 'mt-1' adds minimal top margin -->
-              Video 1 of 8
-              <!-- Shows current video number and total; updates with JS -->
-            </p>
-          </div>
+            <p class="mt-2" id="hazardScoreDisplay">Hazard Perception Score: 0</p>
+            <p class="mt-1" id="hazardVideoCount">Video 1 of 8</p>
         </div>
-      </main>
-      
-  
+    </div>
 
+</main>
 
+<!-- ================= FOOTER ================= -->
+<footer>
+    <!-- Site copyright -->
+    <p class="mb-1">© 2026 LearnDrive</p>
+    <!-- Tagline -->
+    <p class="mb-2">Supporting learner drivers across the UK</p>
+    <!-- Social media icons -->
+    <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+</footer>
 
-  
-  
-  
-  
-
-      
-      
-       <!--Footer -->
-      <footer class="bg-dark text-white text-center py-4">
-        <p class="mb-1">© 2026 LearnDrive</p>
-        <p class="mb-2">Supporting learner drivers across the UK</p>
-        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
-        
-      </footer>
-      
-        
-      
-    <!-- bootstrap javascript -->
-    <!-- ================= BOOTSTRAP JAVASCRIPT ================= -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- ================= QUIZ & HAZARD PERCEPTION JAVASCRIPT ================= -->
-
+<!-- ================= JS FILE ================= -->
 <script src="assets/js/quiz.js"></script>
 
 </body>
 </html>
+
