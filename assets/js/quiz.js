@@ -32,17 +32,19 @@ const quizQuestions = [
 
 
 
-// Case sensitivity causes valid answers to fail
+//  fixed user input and correct answer 
+// converted both values to lowercase
 
 function checkAnswer(userAnswer) {
     const correctAnswer = "Stop";
   
-    if (userAnswer === correctAnswer) {
+    if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
       console.log("Correct");
     } else {
       console.log("Incorrect");
     }
   }
+  
   
   
 
