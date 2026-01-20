@@ -29,15 +29,18 @@ const quizQuestions = [
   
 
 /
-// function does not return correct response
+// 
+// Parameter exists but is ignored
 
-function checkAnswer() {
+function checkAnswer(userAnswer) {
     const correctAnswer = "Stop";
   
-    if ("Stop" === correctAnswer) {
+    // userAnswer is never checked
+    if (correctAnswer === "Stop") {
       console.log("Correct");
     }
   }
+  
   
   
   
