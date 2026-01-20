@@ -29,17 +29,19 @@ const quizQuestions = [
   
 
 /
-// 
-// Parameter exists but is ignored
+
+
+// Compares wrong variables
 
 function checkAnswer(userAnswer) {
     const correctAnswer = "Stop";
   
-    // userAnswer is never checked
-    if (correctAnswer === "Stop") {
+    if (correctAnswer === correctAnswer) {
       console.log("Correct");
     }
   }
+  
+
   
   
   
