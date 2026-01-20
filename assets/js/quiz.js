@@ -171,8 +171,16 @@ function shuffle(arr) {
   
   // ===== INITIALISE QUIZ =====
 // Render the first question immediately on page load
-renderQuestion();
+renderQuestion(); 
 
+// ================== HAZARD PERCEPTION VIDEOS ==================
+// Define each hazard video and the time window where a hazard occurs
+const hazardVideos = [
+    { src: "assets/videos/hazard-1.mp4", hazardStart: 5, hazardEnd: 10 },
+    { src: "assets/videos/hazard-2.mp4", hazardStart: 4, hazardEnd: 9 },
+    { src: "assets/videos/hazard-3.mp4", hazardStart: 6, hazardEnd: 12 }
+  ];
+  
   
   
   
