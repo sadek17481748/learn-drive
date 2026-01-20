@@ -177,6 +177,28 @@
 <!-- ================= QUIZ & HAZARD PERCEPTION JAVASCRIPT ================= -->
 
 
+<script> 
+
+//  Button always sends same value
+
+document.getElementById("answerBtn").addEventListener("click", function () {
+  checkAnswer("Stop"); // Always sends Stop
+});
+// User choices ignored
+function checkAnswer(userAnswer) {
+  const correctAnswer = "Stop"; // always submits stop
+
+  if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+    console.log("Correct");
+  } else {
+    console.log("Incorrect");
+  }
+}
+
+
+
+</script>
+
 
 </body>
 </html>
