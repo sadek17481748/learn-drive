@@ -25,4 +25,19 @@ const quizQuestions = [
       options: ["Prevent skidding", "Increase speed", "Stop engine"],
       answer: "Prevent skidding"
     }
-  ];
+  ]; 
+  
+
+/
+// function does not return correct response
+
+function checkAnswer() {
+    const correctAnswer = "Stop";
+  
+    if ("Stop" === correctAnswer) {
+      console.log("Correct");
+    }
+  }
+  
+  
+  
