@@ -109,7 +109,22 @@ function answerQuiz(btn, ans) {
       quizIndex++;
       renderQuestion();
     }, 500);
+  } 
+  // ================= SHOW QUIZ RESULT =================
+// Displays the final score and saves it in local storage
+function showQuizResult() {
+    document.getElementById("quizContainer").innerHTML = ""; // Clear quiz area
+    document.getElementById("quizResult").innerHTML =
+      `<h4>Quiz Score: ${quizScore}/${quizQuestions.length}</h4>`;
+  
+    // Complete the progress bar
+    document.getElementById("quizProgress").style.width = "100%";
+    document.getElementById("quizProgress").textContent = "100%";
+  
+    // Save the score for later use (optional)
+    localStorage.setItem("practiceQuizScore", quizScore);
   }
+  
   
   
 
