@@ -32,9 +32,9 @@ const quizQuestions = [
 
 
 
-//  fixed user input and correct answer 
-// converted both values to lowercase
 
+// Function works but is never triggered
+//not connected to USER iNTERFACE
 function checkAnswer(userAnswer) {
     const correctAnswer = "Stop";
   
@@ -44,6 +44,9 @@ function checkAnswer(userAnswer) {
       console.log("Incorrect");
     }
   }
+  
+  // No event listener attached
+  
   
   
   
