@@ -31,15 +31,19 @@ const quizQuestions = [
 /
 
 
-// Compares wrong variables
+
+// Case sensitivity causes valid answers to fail
 
 function checkAnswer(userAnswer) {
     const correctAnswer = "Stop";
   
-    if (correctAnswer === correctAnswer) {
+    if (userAnswer === correctAnswer) {
       console.log("Correct");
+    } else {
+      console.log("Incorrect");
     }
   }
+  
   
 
   
