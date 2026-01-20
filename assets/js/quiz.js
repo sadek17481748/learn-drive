@@ -263,7 +263,10 @@ nextBtn.addEventListener("click", () => {
     currentHazardIndex++;
     loadHazardVideo(currentHazardIndex);
   });
-  
+  // ================== INITIALISE HAZARD PERCEPTION ==================
+// Start the first hazard video when the page loads
+loadHazardVideo(currentHazardIndex);
+
   
   
   
