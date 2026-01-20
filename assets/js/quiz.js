@@ -48,27 +48,66 @@ const quizQuestions = [
   ]; 
   
 
-/
+// ===== QUIZ LOGIC =====
+// Track user's score and which question they are on
+let quizScore = 0, quizIndex = 0;
+// ================= RENDER QUESTION =================
+// This function displays the current quiz question and its options
+function renderQuestion() {
 
-
-
-
-
-//  Button always sends same value
-
-document.getElementById("answerBtn").addEventListener("click", function () {
-    checkAnswer("Stop"); // Always sends Stop
-  });
-  
-  function checkAnswer(userAnswer) {
-    const correctAnswer = "Stop";
-  
-    if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
-      console.log("Correct");
-    } else {
-      console.log("Incorrect");
+    // If we have reached the end of the questions, show results
+    if (quizIndex >= quizQuestions.length) {
+      showQuizResult();
+      return;
     }
+  
+    // Get the current question object
+    const q = quizQuestions[quizIndex];
+  
+    // Copy the options array so we can shuffle without modifying original
+    const options = [...q.options];
+    shuffle(options); // Shuffle options to randomize button order
+  
+    // Build the HTML for the question card
+    let html = `<div class="quiz-card"><h5>${quizIndex + 1}. ${q.q}</h5>`;
+  
+    // If the question has an image, add it to the card
+    if (q.img) html += `<img src="${q.img}" class="quiz-img" alt="Road Sign Placeholder">`;
+  
+    // Add a button for each option
+    options.forEach(opt =>
+      html += `<button class="btn btn-outline-dark btn-option" onclick="answerQuiz(this,'${q.answer}')">${opt}</button>`
+    );
+  
+    html += `</div>`;
+  
+    // Insert the question HTML into the page
+    document.getElementById("quizContainer").innerHTML = html;
+  
+    // Update the progress bar
+    updateProgress();
   }
+  
+
+
+
+
+
+// //  Button always sends same value
+
+// document.getElementById("answerBtn").addEventListener("click", function () {
+//     checkAnswer("Stop"); // Always sends Stop
+//   });
+  
+//   function checkAnswer(userAnswer) {
+//     const correctAnswer = "Stop";
+  
+//     if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+//       console.log("Correct");
+//     } else {
+//       console.log("Incorrect");
+//     }
+//   }
   
   
   
