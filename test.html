@@ -177,32 +177,52 @@
 <!-- ================= QUIZ & HAZARD PERCEPTION JAVASCRIPT ================= -->
 
 
-<script> 
-
-
-//  Reads element instead of its value
-
-document.getElementById("answerBtn").addEventListener("click", function () {
-  const input = document.getElementById("userAnswer");
-  checkAnswer(input); // Should be input.value
-});
-
-function checkAnswer(userAnswer) {
-  const correctAnswer = "Stop";
-
-  if (userAnswer === correctAnswer) {
-    console.log("Correct");
-  } else {
-    console.log("Incorrect");
-  }
-}
-
-}
-
-
-
-</script>
-
-
-</body>
-</html>
+<script>
+    
+    // Purpose: Validate a user's text input against a correct answer
+    // Fix applied: Ensure DOM elements exist before attaching event listeners
+    
+    // Wait until the HTML document has fully loaded
+    document.addEventListener("DOMContentLoaded", function () {
+    
+      // Get reference to the button AFTER the DOM is ready
+      const answerButton = document.getElementById("answerBtn");
+    
+      // Defensive check: ensures the button exists
+      if (!answerButton) {
+        console.error("Button with ID 'answerBtn' not found");
+        return;
+      }
+    
+      // Attach click event listener to the button
+      answerButton.addEventListener("click", function () {
+    
+        // Get the user's input value from the text field
+        const userAnswer = document.getElementById("userAnswer").value;
+    
+        // Pass user input into the validation function
+        checkAnswer(userAnswer);
+      });
+    
+    });
+    
+    // ================= ANSWER CHECK FUNCTION =================
+    // Compares the user's input against the correct answer
+    function checkAnswer(userAnswer) {
+    
+      // Store the correct answer in one place
+      const correctAnswer = "Stop";
+    
+      /*
+        FIX APPLIED:
+        - trim() removes accidental spaces before/after input
+        - toLowerCase() prevents case-sensitivity issues
+      */
+      if (userAnswer.trim().toLowerCase() === correctAnswer.toLowerCase()) {
+        console.log("Correct");
+      } else {
+        console.log("Incorrect");
+      }
+    }
+    </script>
+    
