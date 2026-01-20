@@ -124,6 +124,20 @@ function showQuizResult() {
     // Save the score for later use (optional)
     localStorage.setItem("practiceQuizScore", quizScore);
   }
+  // ================= UPDATE PROGRESS BAR =================
+// Updates visual progress indicator as user goes through questions
+function updateProgress() {
+    const perc = (quizIndex / quizQuestions.length) * 100;
+    document.getElementById("quizProgress").style.width = perc + "%";
+    document.getElementById("quizProgress").textContent = Math.round(perc) + "%";
+  }
+  // ================= UPDATE PROGRESS BAR =================
+// Updates visual progress indicator as user goes through questions
+function updateProgress() {
+    const perc = (quizIndex / quizQuestions.length) * 100;
+    document.getElementById("quizProgress").style.width = perc + "%";
+    document.getElementById("quizProgress").textContent = Math.round(perc) + "%";
+  }
   
   
   
