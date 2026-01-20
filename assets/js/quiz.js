@@ -180,7 +180,13 @@ const hazardVideos = [
     { src: "assets/videos/hazard-2.mp4", hazardStart: 4, hazardEnd: 9 },
     { src: "assets/videos/hazard-3.mp4", hazardStart: 6, hazardEnd: 12 }
   ];
-  
+  // ================== HAZARD PERCEPTION TRACKING VARIABLES ==================
+// Track which video the user is on and their hazard perception score
+let currentHazardIndex = 0;
+let totalScore = 0; // DVSA-style hazard score
+let clicksThisVideo = 0; // Count clicks per video
+let validClickRecorded = false; // Prevent multiple valid clicks per hazard
+
   
   
   
