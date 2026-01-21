@@ -1,5 +1,5 @@
 # learn-drive 
-# World of History Museum Website
+
 
 ### Table of Contents
 - [Overview](#overview)
@@ -75,7 +75,7 @@
 ---
 
 # Wireframes
-
+https://drive.google.com/file/d/1eUZCwjDJFrG4EQ0neUAoqjO781Kb-ZPM/view?usp=share_link
 
 ---
 
@@ -103,8 +103,40 @@
 
 ---
 
-# File Structure
-# File Structure
+# File Structure 
+
+
+
+
+├── 404.html
+├── README.md
+├── assets
+│   ├── css
+│   │   └── style.css
+│   ├── images
+│   │   ├── children.jpg
+│   │   ├── left.jpg
+│   │   ├── no-entry.jpeg
+│   │   ├── one-way.jpg
+│   │   ├── parking.jpg
+│   │   ├── speed-bump.jpeg
+│   │   ├── speed.jpg
+│   │   ├── stop-sign.jpg
+│   │   └── warning.jpeg
+│   ├── js
+│   │   ├── app.js
+│   │   ├── quiz.js
+│   │   └── topics.js
+│   └── videos
+│       ├── hazard-1.mp4
+│       ├── hazard-2.mp4
+│       └── hazard-3.mp4
+├── index.html
+├── quiz.html
+├── test.html
+└── topics.html
+
+
 
 
 ---
@@ -139,7 +171,7 @@ The website was deployed online using **GitHub Pages**, which allows static webs
 1. Opening the repository settings and navigating to the **Pages** section.  
 2. Selecting the **main branch** as the source branch and the **root folder** as the deployment folder.  
 3. GitHub Pages then generated a live URL for the website: 
-https://sadek17481748.github.io/worldofhistory/
+
 
 
 
@@ -156,6 +188,20 @@ Github repositry (https://github.com/sadek17481748/learn-drive)
 
 # Testing and Bugs
 
+##  Bug Tracking & Resolution Log
+
+| Bug ID | Bug Description | Issue Identified | Fix Implemented | Resolved (Yes/No) | Manual Testing Performed | Screenshot Evidence |
+|------|-----------------|------------------|-----------------|-------------------|--------------------------|---------------------|
+| B01 | Quiz function contained no logic | Function executed but produced no output or behaviour | Added comparison logic to evaluate answers | Yes | Called function in console and observed output | [Link here] |
+| B02 | Hardcoded answer value | Function always returned correct regardless of user input | Introduced function parameter for user input | Yes | Passed different values into function via console | [Link here] |
+| B03 | Function parameter unused | User input parameter was ignored | Updated comparison to include passed parameter | Yes | Logged parameter value and verified comparison | [Link here] |
+| B04 | Incorrect variable comparison | Variable compared to itself, always returning true | Corrected conditional to compare user input to correct answer | Yes | Tested with incorrect input to confirm failure case | [Link here] |
+| B05 | Case sensitivity issue | Valid answers failed due to uppercase/lowercase mismatch | Normalised input using `toLowerCase()` | Yes | Tested with mixed-case user inputs | [Link here] |
+| B06 | Whitespace handling error | Leading/trailing spaces caused valid answers to fail | Applied `trim()` to user input | Yes | Entered answers with spaces before/after text | [Link here] |
+| B07 | Function not connected to UI | Quiz logic existed but was never triggered | Added event listener to button | Yes | Clicked button and observed console output | [Link here] |
+| B08 | Hardcoded value passed from button | User selection ignored | Read input value dynamically from form field | Yes | Changed input value and confirmed output updated | [Link here] |
+| B09 | Incorrect DOM value reference | Passed DOM element instead of its value | Used `.value` property of input field | Yes | Logged value to console before comparison | [Link here] |
+| B10 | Final validation edge cases | Inconsistent behaviour with empty input | Added input validation and normalisation | Yes | Tested empty, invalid, and valid inputs manually | [Link here] |
 
 
 |
