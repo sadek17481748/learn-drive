@@ -89,6 +89,7 @@ This setup allows learners to practice effectively and gain confidence before th
 
 
 
+
 # Project Goals
 
 The main goals of the **Learn Drive** project are:  
@@ -113,12 +114,20 @@ The main goals of the **Learn Drive** project are:
 ## User Stories
 
 ### First Time Users
-
+* As a first-time user, I want to quickly understand what Learn Drive offers so I can start practicing without confusion.  
+* As a first-time user, I want to take a sample quiz to see how the questions work and how I will be tested.  
+* As a first-time user, I want to watch a hazard perception video to experience the interactive content.  
 
 ### Returning Users
-* 
+* As a returning user, I want to pick up where I left off in my quizzes so I don’t have to start over.  
+* As a returning user, I want to review specific topics or road signs to focus on areas I find difficult.  
+* As a returning user, I want to track my quiz performance over time to see my progress.  
 
 ### Frequent Users
+* As a frequent user, I want to practice all theory topics systematically so I can master the material.  
+* As a frequent user, I want to challenge myself with hazard perception videos repeatedly to improve my reaction skills.  
+* As a frequent user, I want the website to remember my progress and make suggestions for areas to revise.
+
 
 
 ---
@@ -136,13 +145,58 @@ The main goals of the **Learn Drive** project are:
 
 ## Colour Scheme
 
+The Learn Drive website uses a limited but consistent colour palette:
 
+| Purpose | Colour | Hex |
+|----------|--------|-----|
+| Navbar background | Dark Blue | `#1A374D` |
+| Navbar text / buttons | White | `#FFFFFF` |
+| Primary button background | Light Blue | `#4A90E2` |
+| Primary button text | White | `#FFFFFF` |
+| Section headers / titles | Black | `#000000` |
+| Body background | White | `#FFFFFF` |
+| Quiz feedback (correct) | Green | `#28A745` |
+| Quiz feedback (incorrect) | Red | `#DC3545` |
+
+
+
+# Design
+
+## Colour Scheme
+
+Learn Drive uses a consistent, modern colour palette:
+
+| Purpose | Colour | Hex |
+|---------|--------|-----|
+| Body background | Light grey | `#f9f9f9` |
+| Navbar background | Dark | `#222222` |
+| Navbar text / links | White | `#ffffff` |
+| Navbar hover | Gold | `#ffc107` |
+| Primary buttons | Dark | `#222222` |
+| Primary button hover | Gold | `#ffcc00` |
+| Button text hover | Dark | `#222222` |
+| Marked quiz feedback | Green | `#28a745` |
+| Footer background | Dark | `#1a1a1a` |
+| Footer text | Light grey | `#dddddd` |
+| Footer link hover | White | `#ffffff` |
+
+---
 
 ## Typography
 
+* **Body text:** `'Poppins', sans-serif` for a clean and readable interface.  
+* **Headings:** `'Merriweather', serif` for visual hierarchy and emphasis on section titles.  
+* **Buttons & Links:** Bold text with hover transitions for clear interactive feedback.  
 
+---
 
 ## Imagery
+
+* **Road Sign Images:** Stored in `assets/images/`, realistic visuals for learners.  
+* **Hazard Perception Videos:** Short clips in `assets/videos/` simulate real driving scenarios.  
+* **Cards & Interactive Elements:** Subtle hover animations (`transform: scale(1.05)`) to indicate interactivity.  
+* **Overall Style:** Clean and minimalistic with a focus on user-friendly learning and clear visual cues.
+
 
 
 ---
