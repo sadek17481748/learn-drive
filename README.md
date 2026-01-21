@@ -612,7 +612,7 @@ h
 ## Bug Tracking & Resolution Log 
 
 | Bug ID | Bug Description | Issue Identified | Fix Implemented | Resolved | Manual Testing Performed | Screenshot Evidence |
-|------|-----------------|------------------|-----------------|----------|--------------------------|---------------------|
+|--------|----------------|-----------------|----------------|----------|------------------------|-------------------|
 | B01 | Quiz produced no response | Quiz logic existed but was never triggered by user interaction | Connected quiz logic to UI using event listeners | Yes | Clicked quiz options and verified logic execution via console | Link |
 | B02 | Hardcoded correct answer | Quiz always validated against the same answer | Moved correct answers into `quizQuestions` array | Yes | Selected different options and verified correct scoring | Link |
 | B03 | User input not read correctly | DOM element passed instead of its value/text | Used `.textContent` and `.value` correctly | Yes | Logged user input values during selection | Link |
@@ -633,6 +633,18 @@ h
 | B18 | Footer not fixed to bottom | Visible gap under footer on short pages | Applied flexbox layout to body/footer | Yes | Viewed page with minimal content | Link |
 | B19 | Duplicate quiz questions | Questions appeared more than once | Cleaned and reviewed question array | Yes | Completed quiz and checked repetitions | Link |
 | B20 | Restart did not reset hazard state | Hazard data persisted after restart | Reset all hazard variables on restart | Yes | Restarted quiz and hazard section | Link |
+| B21 | `<!DOCTYPE html>` inside JS | HTML doctype incorrectly appears inside JS file | Move `<!DOCTYPE html>` to **top of HTML file**, remove from JS | No | Open page and check console for parse errors | Screenshot pending |
+| B22 | Stray backslash in `<head>` | Extra `\` causes HTML parsing warning | Remove stray `\` character in `<head>` | No | Inspect `<head>` and console warnings | Screenshot pending |
+| B23 | Hazard video count mismatch | Text shows “Video 1 of 8” but only 3 videos defined | Set total dynamically: `hazardVideos.length` | No | Observe video count in hazard section | Screenshot pending |
+| B24 | Shadowed `quizScore` variable in hazard function | Local variable overwrites global score causing incorrect total | Remove local redeclaration inside `loadHazardVideo()` | No | Complete quiz + hazard and verify combined score | Screenshot pending |
+| B25 | Video `<source>` overridden | Video element `<source>` differs from JS `video.src` | Remove `<source>` tag in HTML or update JS to use `<source>` consistently | No | Inspect video element, check network tab | Screenshot pending |
+| B26 | Progress bar doesn’t reach 100% until result | Progress bar jumps to 100% after final question | Update `updateProgress()` to include last question: `perc = ((quizIndex+1)/quizQuestions.length)*100` | No | Observe progress bar during last question | Screenshot pending |
+| B27 | Click hazard video before play | Clicking before video start still counts | Add `if(video.paused) return;` at start of click handler | No | Click immediately and observe score | Screenshot pending |
+| B28 | Duplicate `No honking` question | Same quiz question repeated | Remove duplicates from `quizQuestions` array | No | Scroll through quiz questions | Screenshot pending |
+| B29 | Missing alt text for images | Some images missing descriptive `alt` attribute | Add descriptive `alt` to all `<img>` in `quizQuestions` | No | Inspect element and check `alt` | Screenshot pending |
+| B30 | Next button visible after last video | “Next Video” button remains visible when no more videos | Hide button: `nextBtn.style.display = 'none';` at end of hazard array | No | Complete hazard section | Screenshot pending |
+| B31 | JS console errors on reload | JS runs before DOM fully loaded | Wrap JS in `DOMContentLoaded` event listener | No | Reload page and check console | Screenshot pending |
+
 
 
 
