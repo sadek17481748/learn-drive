@@ -227,7 +227,8 @@ https://drive.google.com/file/d/1eUZCwjDJFrG4EQ0neUAoqjO781Kb-ZPM/view?usp=share
 * Balsamiq
 * W3C Validator
 * MDN
-* Chat GPT
+* Chat GPT 
+* Google Docs
 
 ---
 
@@ -267,7 +268,7 @@ https://drive.google.com/file/d/1eUZCwjDJFrG4EQ0neUAoqjO781Kb-ZPM/view?usp=share
 ---
 
 # Development 
-# Development
+
 
 ## Initial Planning
 
@@ -359,15 +360,91 @@ On the topics page, I added:
 
 ## Testing and Debugging
 
-Throughout development, I regularly tested the website in the browser to ensure:
-- Links worked correctly
-- Layouts displayed properly on different screen sizes
-- JavaScript functions behaved as expected
+Testing was carried out throughout the development process using **manual testing methods**. This approach allowed issues to be identified and fixed early while features were being built.
 
-I used:
-- Browser developer tools
-- Console logging
-- Commented code sections to document bugs and potential improvements
+### Manual Testing Approach
+
+Manual testing was used instead of automated testing due to the size and scope of the project. Each feature was tested directly in the browser to ensure it behaved as expected.
+
+The following actions were tested manually:
+- Navigation links between pages
+- Page layout and responsiveness
+- Button interactions and hover effects
+- Quiz functionality and scoring
+- Hazard perception video playback and scoring
+- Topic filtering and “Mark as Revised” functionality
+
+Screenshots were taken during testing to record:
+- Correct layout and styling
+- Successful quiz completion
+- Hazard perception score output
+- Topic filtering and revised state changes
+
+These screenshots were used as evidence that features worked as intended.
+
+---
+
+### Cross-Browser and Device Testing
+
+The website was tested on:
+- Google Chrome
+- Safari
+
+Testing included:
+- Desktop screen sizes
+- Tablet and mobile screen widths using browser developer tools
+
+Bootstrap’s responsive grid system ensured that content adjusted correctly across different screen sizes.
+
+---
+
+
+---
+
+### Validation Testing
+
+HTML and CSS were checked to ensure:
+- Proper nesting of elements
+- Consistent styling across pages
+- No broken links or missing assets
+
+JavaScript was tested using:
+- Browser console output
+- Step-by-step testing of user interactions
+- Reload testing to confirm `localStorage` data persistence
+
+---
+
+### Regression Testing
+
+After fixing bugs, regression testing was carried out to ensure:
+- Existing functionality was not broken
+- Styling remained consistent across pages
+- JavaScript features continued to work as expected
+
+Each time a fix was applied, the affected page was re-tested manually.
+
+---
+
+### Final Testing Before Deployment
+
+Before final deployment:
+- All links were tested
+- All quiz questions were completed to verify scoring
+- Hazard perception videos were played fully
+- Topic filters and revision buttons were re-tested
+
+Once confirmed, the final version was pushed to GitHub and deployed using GitHub Pages.
+
+---
+
+### Testing Summary
+
+Manual testing ensured that:
+- All features functioned correctly
+- The website was responsive and user-friendly
+- Bugs were identified and resolved efficiently
+- The final deployed site behaved as intended
 
 ---
 
@@ -439,7 +516,98 @@ Live link:[https://sadek17481748.github.io/learn-drive/]
 Github repositry (https://github.com/sadek17481748/learn-drive)
 
 
-# Testing and Bugs
+# Testing and Bugs 
+
+## Manual Testing vs Automated Testing
+
+Software testing can be carried out using either **manual testing** or **automated testing**, depending on the size, complexity, and requirements of the project.
+
+---
+
+### Manual Testing
+
+Manual testing is when a developer or tester checks the software by **interacting with it directly**, without using automated scripts or tools.
+
+#### When Manual Testing Is Used
+Manual testing is most suitable when:
+- The project is small or medium in size
+- Features are still changing frequently
+- Visual layout and user experience need to be evaluated
+- Human judgement is required
+
+#### Examples of Manual Testing
+- Clicking navigation links to ensure they go to the correct pages
+- Completing a quiz to verify scoring logic
+- Watching hazard perception videos to confirm playback and interaction
+- Checking hover effects and button states
+- Testing responsiveness using browser resizing tools
+
+#### Advantages
+- Easy to set up and perform
+- Ideal for usability and visual testing
+- Flexible when features are frequently updated
+
+#### Disadvantages
+- Time-consuming for large projects
+- Prone to human error
+- Needs to be repeated manually after every change
+
+---
+
+### Automated Testing
+
+Automated testing uses **scripts and testing tools** to automatically execute tests and compare actual results with expected results.
+
+#### When Automated Testing Is Used
+Automated testing is most suitable when:
+- The project is large or complex
+- Features are stable and unlikely to change often
+- Tests need to be run repeatedly
+- High accuracy and speed are required
+
+#### Examples of Automated Testing
+- Unit tests to check individual JavaScript functions
+- Automated form validation testing
+- Regression tests run after every code update
+- Performance and load testing
+- Continuous Integration (CI) testing pipelines
+
+#### Advantages
+- Fast and repeatable
+- Reduces human error
+- Ideal for regression testing
+- Saves time on large projects
+
+#### Disadvantages
+- Requires more setup time
+- Needs technical knowledge to write test scripts
+- Less effective for testing user experience and design
+
+---
+
+### Comparison Summary
+
+| Feature | Manual Testing | Automated Testing |
+|-------|---------------|------------------|
+| Human interaction | Required | Not required |
+| Best for | UI, usability, small projects | Large, repetitive tests |
+| Setup time | Low | High |
+| Cost | Low | Higher initially |
+| Speed | Slower | Faster |
+| Flexibility | High | Lower |
+
+---
+
+### Testing Approach Used in This Project
+
+For the Learn Drive project, **manual testing** was chosen because:
+- The project is relatively small
+- Features were developed iteratively
+- Visual layout and user experience were important
+- The site required frequent changes during development
+
+Automated testing would be more suitable if the project were expanded to include user accounts, databases, or complex back-end functionality.
+
 
 ##  Bug Tracking & Resolution Log
 
