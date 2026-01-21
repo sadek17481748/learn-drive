@@ -23,10 +23,42 @@
 # Overview
 
 
+**Learn Drive** is a web-based platform designed for learner drivers to practice their theory test. The website provides users with interactive resources, including:  
+
+- **Multiple-choice quizzes** to test knowledge of road signs, rules, and regulations.  
+- **Hazard perception videos** where users can watch scenarios and identify potential hazards.  
+- **Organized topics** covering different areas of the driving theory curriculum where learners can track thier progress.
+
+The platform aims to help learners prepare effectively for their driving theory test in a user-friendly and engaging way.
+
+
 
 ---
 
 # Features
+
+**Learn Drive** includes the following key features:
+
+- **Interactive Quizzes**  
+  - `quiz.html` and `test.html` contain multiple-choice questions for learners to practice their theory test.  
+  - `js/quiz.js` manages the quiz logic and scoring.  
+
+- **Hazard Perception Practice**  
+  - Users can watch hazard perception videos in `videos/` and identify potential hazards.  
+  - `js/app.js` handles video playback and navigation between scenarios.  
+
+- **Organized Topics**  
+  - `topics.html` presents a structured list of theory test topics for easy navigation.  
+  - `js/topics.js` manages dynamic topic content.  
+
+- **Responsive Design**  
+  - `assets/css/style.css` ensures the website works well on both desktop and mobile devices.  
+
+- **Visual Learning Aids**  
+  - `assets/images/` contains road sign images and visual examples to enhance learning.  
+
+This setup allows learners to practice effectively and gain confidence before their driving theory test.
+
 
 
 ---
