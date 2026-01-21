@@ -63,9 +63,50 @@ This setup allows learners to practice effectively and gain confidence before th
 
 ---
 
-# User Experience UX
+# User Experience
 
-## Project Goals
+**Learn Drive** is designed to provide a smooth and engaging experience for learner drivers:  
+
+- **Intuitive Navigation**  
+  - Users can easily move between the home page, quizzes, topics, and hazard perception videos.  
+  - Clear menus and buttons guide users through the website without confusion.  
+
+- **Interactive Learning**  
+  - Quizzes provide immediate feedback so learners can understand mistakes and improve.  
+  - Hazard perception videos simulate real driving scenarios, helping learners recognize hazards effectively.  
+
+- **Visual and Responsive Design**  
+  - Road sign images and hazard visuals make learning more memorable.  
+  - The site adapts to different screen sizes, ensuring a consistent experience on desktops, tablets, and smartphones.  
+
+- **Structured Learning Path**  
+  - Topics are organized logically so users can study one area at a time.  
+  - The combination of theory questions and hazard perception videos reinforces knowledge in a practical way.  
+
+- **Accessible and Lightweight**  
+  - Fast-loading pages and simple layout ensure accessibility even on slower devices.  
+  - Minimal distractions allow learners to focus on practicing for their theory test.
+
+
+
+# Project Goals
+
+The main goals of the **Learn Drive** project are:  
+
+- **Enhance Learner Driver Preparation**  
+  - Provide a platform where learners can practice theory test questions and hazard perception exercises in a structured and effective way.  
+
+- **Interactive and Engaging Learning**  
+  - Make learning fun and memorable through quizzes, videos, and visual aids, rather than just reading theory.  
+
+- **Accessible Anywhere**  
+  - Ensure the website works on both desktop and mobile devices so learners can practice anytime, anywhere.  
+
+- **Build Confidence for the Driving Test**  
+  - Help users identify gaps in their knowledge and improve their hazard perception skills to increase their chances of passing the driving theory test.  
+
+- **Structured and Organized Learning**  
+  - Present topics in a logical order so users can focus on one area at a time and track their progress effectively.
 
 
 
