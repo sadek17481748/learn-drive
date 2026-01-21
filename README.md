@@ -8,7 +8,8 @@
 - [Wireframes](#wireframes)
 - [Design](#design)
 - [Technologies Used](#technologies-used)
-- [File Structure](#file-structure)
+- [File Structure](#file-structure) 
+- [Development](#development)
 - [Deployment](#deployment)
 - [Testing and Bugs](#testing-and-bugs)
   - [Manual Testing](#manual-testing)
@@ -263,6 +264,131 @@ https://drive.google.com/file/d/1eUZCwjDJFrG4EQ0neUAoqjO781Kb-ZPM/view?usp=share
 ├── test.html
 └── topics.html
 
+---
+
+# Development 
+# Development
+
+## Initial Planning
+
+Before starting development, I planned the purpose of the website and its main features. The goal was to create a simple and user-friendly platform where learner drivers could practise for their UK driving theory test.
+
+I identified the core sections the website would need:
+- A home page to introduce the website
+- A topics page to revise theory content
+- A quiz page to test knowledge
+- A hazard perception section to simulate real test conditions
+
+I also planned a clear folder structure to keep the project organised, separating HTML files, CSS, JavaScript, images, and videos.
+
+---
+
+## Project Setup
+
+The first technical step was creating a **GitHub repository** for version control. This allowed me to track changes throughout development and provided a hosted version of the site using GitHub Pages.
+
+I then:
+- Cloned the repository to my local machine
+- Opened the project in **Visual Studio Code**
+- Linked the local project to the GitHub repository so changes could be committed and pushed regularly
+
+This ensured the project was backed up and versioned from the start.
+
+---
+
+## HTML Development
+
+I began development by creating the main structure of the website using `index.html`. This page was used to define:
+- The overall layout
+- Navigation bar
+- Footer
+- General page structure
+
+Once the home page structure was complete, I created additional HTML pages (`topics.html`, `quiz.html`, etc.) using the same layout. This ensured consistency across the website and reduced duplication of work.
+
+Each page includes:
+- A fixed navigation bar
+- A main content area
+- A footer with social links
+
+---
+
+## CSS Styling and Consistency
+
+After setting up the HTML structure, I created an external stylesheet (`style.css`) to manage all custom styling.
+
+I:
+- Chose a consistent colour scheme using dark backgrounds and light text
+- Selected fonts to improve readability and hierarchy
+- Applied spacing, hover effects, and transitions
+- Used Flexbox to ensure the footer stays at the bottom of the page
+
+All HTML pages were linked to the same stylesheet to ensure consistent styling across the entire site.
+
+Bootstrap was also used alongside custom CSS to speed up layout creation and improve responsiveness.
+
+---
+
+## JavaScript Development
+
+Once the structure and styling were complete, I focused on adding interactivity using JavaScript.
+
+### Quiz Functionality
+I developed a practice quiz system that:
+- Displays multiple-choice questions dynamically
+- Tracks user progress with a progress bar
+- Provides immediate feedback for correct and incorrect answers
+- Calculates and displays the final score
+- Stores results using `localStorage`
+
+### Hazard Perception
+I implemented a hazard perception feature using HTML5 video:
+- Videos are played sequentially
+- User clicks are tracked to measure reaction time
+- Points are awarded based on how quickly hazards are identified
+- Scores are combined with the quiz results to produce a final pass or fail result
+
+### Topics Page Interactivity
+On the topics page, I added:
+- A category filter using a dropdown menu
+- A “Mark as Revised” feature
+- Visual feedback to show completed topics
+- Disabled buttons after marking topics as revised
+
+---
+
+## Testing and Debugging
+
+Throughout development, I regularly tested the website in the browser to ensure:
+- Links worked correctly
+- Layouts displayed properly on different screen sizes
+- JavaScript functions behaved as expected
+
+I used:
+- Browser developer tools
+- Console logging
+- Commented code sections to document bugs and potential improvements
+
+---
+
+## Deployment
+
+After development and testing, the project was deployed using **GitHub Pages**. This allowed the site to be accessed publicly and tested in a real environment.
+
+Any issues found after deployment were fixed locally and pushed back to the GitHub repository.
+
+---
+
+## Reflection on Development
+
+The development process followed a logical progression:
+1. Planning and setup
+2. HTML structure
+3. CSS styling
+4. JavaScript functionality
+5. Testing and deployment
+
+This approach helped keep the project organised and made it easier to add new features without breaking existing functionality.
 
 
 
