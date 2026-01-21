@@ -607,22 +607,33 @@ For the Learn Drive project, **manual testing** was chosen because:
 - The site required frequent changes during development
 
 Automated testing would be more suitable if the project were expanded to include user accounts, databases, or complex back-end functionality.
+h
 
+## Bug Tracking & Resolution Log 
 
-##  Bug Tracking & Resolution Log
+| Bug ID | Bug Description | Issue Identified | Fix Implemented | Resolved | Manual Testing Performed | Screenshot Evidence |
+|------|-----------------|------------------|-----------------|----------|--------------------------|---------------------|
+| B01 | Quiz produced no response | Quiz logic existed but was never triggered by user interaction | Connected quiz logic to UI using event listeners | Yes | Clicked quiz options and verified logic execution via console | Link |
+| B02 | Hardcoded correct answer | Quiz always validated against the same answer | Moved correct answers into `quizQuestions` array | Yes | Selected different options and verified correct scoring | Link |
+| B03 | User input not read correctly | DOM element passed instead of its value/text | Used `.textContent` and `.value` correctly | Yes | Logged user input values during selection | Link |
+| B04 | Case sensitivity error | Correct answers failed due to uppercase/lowercase mismatch | Normalised input using `toLowerCase()` | Yes | Tested answers with mixed casing | Link |
+| B05 | Whitespace input error | Leading/trailing spaces caused valid answers to fail | Applied `trim()` to user input | Yes | Entered answers with extra spaces | Link |
+| B06 | Function parameter unused | Function accepted input but ignored it | Updated comparison logic to use function parameter | Yes | Passed different values and verified outcomes | Link |
+| B07 | Incorrect conditional logic | Variable compared to itself, always returning true | Corrected conditional comparison | Yes | Tested correct and incorrect answers | Link |
+| B08 | Multiple answer submissions allowed | Users could click options multiple times | Disabled all buttons after first selection | Yes | Attempted multiple clicks per question | Link |
+| B09 | No visual feedback on answers | Users could not see correct/incorrect answers | Added CSS classes for visual feedback | Yes | Selected answers and verified colour changes | Link |
+| B10 | Progress bar not updating | Progress bar remained static | Added dynamic progress calculation | Yes | Completed quiz and observed progress updates | Link |
+| B11 | Quiz score lost on reload | Score not persisted between sections | Stored score using `localStorage` | Yes | Reloaded page and checked stored score | Link |
+| B12 | External JS file broke quiz | Script loaded before DOM elements | Moved script to bottom of HTML | Yes | Reloaded page and verified quiz functionality | Link |
+| B13 | Hazard video click spamming | Users could spam-click to inflate score | Limited clicks and added validation flag | Yes | Rapidly clicked video to test limits | Link |
+| B14 | Hazard scored outside valid window | Clicks outside hazard zone awarded points | Enforced strict time window checks | Yes | Clicked before and after hazard window | Link |
+| B15 | No reaction-time weighting | All hazard clicks gave same score | Implemented DVSA-style scoring system | Yes | Clicked at different times to test scoring | Link |
+| B16 | Hazard videos did not advance | “Next Video” button had no effect | Corrected hazard index increment | Yes | Clicked next button across videos | Link |
+| B17 | No final results screen | App ended abruptly after last video | Added combined results summary | Yes | Completed full quiz and hazard sequence | Link |
+| B18 | Footer not fixed to bottom | Visible gap under footer on short pages | Applied flexbox layout to body/footer | Yes | Viewed page with minimal content | Link |
+| B19 | Duplicate quiz questions | Questions appeared more than once | Cleaned and reviewed question array | Yes | Completed quiz and checked repetitions | Link |
+| B20 | Restart did not reset hazard state | Hazard data persisted after restart | Reset all hazard variables on restart | Yes | Restarted quiz and hazard section | Link |
 
-| Bug ID | Bug Description | Issue Identified | Fix Implemented | Resolved (Yes/No) | Manual Testing Performed | Screenshot Evidence |
-|------|-----------------|------------------|-----------------|-------------------|--------------------------|---------------------|
-| B01 | Quiz function contained no logic | Function executed but produced no output or behaviour | Added comparison logic to evaluate answers | Yes | Called function in console and observed output | [Link here] |
-| B02 | Hardcoded answer value | Function always returned correct regardless of user input | Introduced function parameter for user input | Yes | Passed different values into function via console | [Link here] |
-| B03 | Function parameter unused | User input parameter was ignored | Updated comparison to include passed parameter | Yes | Logged parameter value and verified comparison | [Link here] |
-| B04 | Incorrect variable comparison | Variable compared to itself, always returning true | Corrected conditional to compare user input to correct answer | Yes | Tested with incorrect input to confirm failure case | [Link here] |
-| B05 | Case sensitivity issue | Valid answers failed due to uppercase/lowercase mismatch | Normalised input using `toLowerCase()` | Yes | Tested with mixed-case user inputs | [Link here] |
-| B06 | Whitespace handling error | Leading/trailing spaces caused valid answers to fail | Applied `trim()` to user input | Yes | Entered answers with spaces before/after text | [Link here] |
-| B07 | Function not connected to UI | Quiz logic existed but was never triggered | Added event listener to button | Yes | Clicked button and observed console output | [Link here] |
-| B08 | Hardcoded value passed from button | User selection ignored | Read input value dynamically from form field | Yes | Changed input value and confirmed output updated | [Link here] |
-| B09 | Incorrect DOM value reference | Passed DOM element instead of its value | Used `.value` property of input field | Yes | Logged value to console before comparison | [Link here] |
-| B10 | Final validation edge cases | Inconsistent behaviour with empty input | Added input validation and normalisation | Yes | Tested empty, invalid, and valid inputs manually | [Link here] |
 
 
 |
