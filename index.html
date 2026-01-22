@@ -53,58 +53,44 @@
     </main>
 
     <!-- ================= PRACTICE QUIZZES SECTION ================= -->
-    <section class="my-5 text-center">
-        <!-- Section heading -->
-        <h3>Practice Quizzes</h3>
-        <!-- Section description -->
-        <p>Test your knowledge with our interactive quizzes.</p>
-        <!-- Call-to-action button -->
-        <a href="quiz.html" class="btn btn-dark">Start Quiz</a>
-    </section>  
-
-    <!-- ================= LEARN TOPICS SECTION ================= -->
-<section class="my-5 text-center">
+<section class="my-5 text-center" aria-labelledby="practiceQuizzesTitle" role="region">
     <!-- Section heading -->
-    <h3>Learn Topics</h3>
+    <h3 id="practiceQuizzesTitle">Practice Quizzes</h3>
     <!-- Section description -->
-    <p>Go through essential driving theory topics at your own pace.</p>
+    <p id="practiceQuizzesDesc">Test your knowledge with our interactive quizzes.</p>
+    <!-- Call-to-action button -->
+    <a href="quiz.html" class="btn btn-dark" aria-describedby="practiceQuizzesDesc" aria-label="Start interactive quizzes">Start Quiz</a>
+</section>  
+
+<!-- ================= LEARN TOPICS SECTION ================= -->
+<section class="my-5 text-center" aria-labelledby="learnTopicsTitle" role="region">
+    <!-- Section heading -->
+    <h3 id="learnTopicsTitle">Learn Topics</h3>
+    <!-- Section description -->
+    <p id="learnTopicsDesc">Go through essential driving theory topics at your own pace.</p>
     <!-- Call-to-action button linking to topics page -->
-    <a href="topics.html" class="btn btn-dark">View Topics</a>
+    <a href="topics.html" class="btn btn-dark" aria-describedby="learnTopicsDesc" aria-label="View all learning topics">View Topics</a>
 </section>
-</main>
 
-
-    <!-- ================= FOOTER ================= -->
-    <footer class="bg-dark text-white text-center py-4">
-        <!-- Copyright and supporting text -->
-        <p class="mb-1">© 2026 LearnDrive</p>
-        <p class="mb-2">Supporting learner drivers across the UK</p>
-        <!-- Social Icons -->
-<a href="https://www.facebook.com" target="_blank" class="text-white me-2">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-  
-  <a href="https://twitter.com" target="_blank" class="text-white me-2">
-    <i class="fab fa-twitter"></i>
-  </a>
-  
-  <a href="https://www.instagram.com" target="_blank" class="text-white me-2">
-    <i class="fab fa-instagram"></i>
-  </a>
-  
-  <a href="https://www.linkedin.com" target="_blank" class="text-white">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-  </footer>
-  
-
-    <!-- ================= BOOTSTRAP JAVASCRIPT ================= -->
-    <!-- Bootstrap JS bundle for interactive components -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
-
-
-
-
-
+<!-- ================= FOOTER ================= -->
+<footer class="bg-dark text-white text-center py-4" role="contentinfo" aria-label="Footer with social links and copyright">
+    <!-- Copyright and supporting text -->
+    <p class="mb-1">© 2026 LearnDrive</p>
+    <p class="mb-2">Supporting learner drivers across the UK</p>
+    <!-- Social Icons -->
+    <a href="https://www.facebook.com" target="_blank" class="text-white me-2" aria-label="Facebook page">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    
+    <a href="https://twitter.com" target="_blank" class="text-white me-2" aria-label="Twitter page">
+        <i class="fab fa-twitter"></i>
+    </a>
+    
+    <a href="https://www.instagram.com" target="_blank" class="text-white me-2" aria-label="Instagram page">
+        <i class="fab fa-instagram"></i>
+    </a>
+    
+    <a href="https://www.linkedin.com" target="_blank" class="text-white" aria-label="LinkedIn page">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+</footer>
