@@ -110,6 +110,22 @@ The main goals of the **Learn Drive** project are:
 - **Structured and Organized Learning**  
   - Present topics in a logical order so users can focus on one area at a time and track their progress effectively.
 
+## Target Audience
+
+The LearnDrive platform is designed for:
+
+- **Learner Drivers (UK)**: Individuals preparing for their driving theory and practical tests.  
+- **New Drivers**: Those who want to improve knowledge on road safety, hazard perception, and traffic rules.  
+- **Driving Instructors**: Professionals who may use the platform as a teaching aid.  
+- **Parents of Learner Drivers**: To support and monitor progress of young drivers.  
+
+Key considerations for this audience:
+
+- Clear, concise learning materials.  
+- Interactive quizzes to test knowledge retention.  
+- Videos for hazard perception practice.  
+- Easy navigation with a mobile-friendly responsive design.  
+- Encouragement of safe driving habits and awareness of road rules.
 
 
 ## User Stories
@@ -695,10 +711,7 @@ h
 
 
 
-### Forms Testing
 
-
----
 
 
 # Lighthouse Testing
