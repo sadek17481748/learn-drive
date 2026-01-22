@@ -643,7 +643,9 @@ h
 | B28 | Duplicate `No honking` question | Same quiz question repeated | Remove duplicates from `quizQuestions` array | No | Scroll through quiz questions | Screenshot pending |
 | B29 | Missing alt text for images | Some images missing descriptive `alt` attribute | Add descriptive `alt` to all `<img>` in `quizQuestions` | No | Inspect element and check `alt` | Screenshot pending |
 | B30 | Next button visible after last video | “Next Video” button remains visible when no more videos | Hide button: `nextBtn.style.display = 'none';` at end of hazard array | No | Complete hazard section | Screenshot pending |
-| B31 | JS console errors on reload | JS runs before DOM fully loaded | Wrap JS in `DOMContentLoaded` event listener | No | Reload page and check console | Screenshot pending |
+| B31 | JS console errors on reload | JS runs before DOM fully loaded | Wrap JS in `DOMContentLoaded` event listener | No | Reload page and check console | Screenshot pending | 
+| B32 | Hazard video auto-plays on page load | Video was set to play automatically when loaded, preventing user control | Removed `video.play()` from `loadHazardVideo()` so playback starts only when user presses play | Yes | Reloaded page and confirmed video remains paused until play is clicked | Screenshot |
+
 
 
 

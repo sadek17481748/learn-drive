@@ -206,10 +206,11 @@ function loadHazardVideo(index) {
   }
 
   // Load video source
-  const v = hazardVideos[index];
-  video.src = v.src;
-  video.currentTime = 0;
-  video.play();
+const v = hazardVideos[index];
+video.src = v.src;
+video.currentTime = 0;
+video.pause(); //  prevent auto-play
+//   video.play();
 
   // Reset click tracking for the new video
   clicksThisVideo = 0;
@@ -256,7 +257,9 @@ nextBtn.addEventListener("click", () => {
 
 // ===== INITIALIZE HAZARD PERCEPTION =====
 // Load the first hazard video on page load
-loadHazardVideo(currentHazardIndex);
+loadHazardVideo(currentHazardIndex); 
+
+
 
 
   
