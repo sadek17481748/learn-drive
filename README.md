@@ -741,7 +741,7 @@ h
     - Filtering logic includes collapsing open accordions.
     - “Mark as Revised” logic handles transition and button update.
 
-
+for quiz.js ran out of time 
 
 ### CSS Validation Results
 
@@ -780,12 +780,94 @@ h
 
 
 # Sources & References
+# Code Attributions
 
+## HTML & UI Structure
 
+- **Bootstrap 5 Accordion Component**  
+  The topics accordion and collapse behavior use Bootstrap’s accordion pattern, which organizes content into vertically collapsible panels.  
+  Source: Bootstrap Accordion documentation – Bootstrap’s official example of accordion usage with collapse behavior. :contentReference[oaicite:0]{index=0}
+
+## CSS
+
+- **Bootstrap 5 Core Styles**  
+  Base layout, typography, buttons, spacing, and utility classes are provided by the Bootstrap framework.  
+  Source: Bootstrap 5 documentation. (https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+
+- **Font Awesome Icons**  
+  Font Awesome classes are used for social icons and UI decoration, leveraging the official icon font library.  
+  Source: Font Awesome Documentation. (https://fontawesome.com/)
+
+## JavaScript Logic
+
+### Quiz Functionality
+
+- **Quiz Questions Array**  
+  The structure of the `quizQuestions` array, containing questions, answer options, and correct answers, is a standard pattern in multiple-choice quiz implementations in vanilla JavaScript.  
+  Reference: CodeHim multiple choice quiz example. :contentReference[oaicite:1]{index=1}
+
+- **Dynamic Rendering & Event Handling**  
+  Buttons are dynamically created and `onclick` events determine correct/incorrect answers, following common interactive quiz patterns.  
+  Reference: Code Explained quiz tutorial. :contentReference[oaicite:2]{index=2}
+
+- **Shuffling Questions**  
+  The Fisher–Yates (Knuth) shuffle algorithm is used to randomize quiz questions and answer options.  
+  Source: [Fisher–Yates shuffle on Wikipedia](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle)
+
+### Progress & Results
+
+- **Progress Bar Updates**  
+  A Bootstrap progress bar is updated based on quiz completion percentage using DOM manipulation and inline style changes.  
+  Reference: Code Explained quiz progress example. :contentReference[oaicite:3]{index=3}
+
+- **Local Storage Score Save**  
+  Quiz scores are persisted between sessions using `localStorage`, based on standard web storage practices.  
+  Reference: [MDN Web Docs – Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)
+
+### Hazard Perception Logic
+
+- **Hazard Video Scoring**  
+  The hazard perception logic — tracking video clicks, reaction times, and scoring within time ranges — is inspired by hazard perception testing concepts used in online practice tests.  
+  Source: [Theory Pass hazard perception practice](https://theorypass.co.uk/practice/hazard-perception/)
+
+- **Video Loading and DOM Interaction**  
+  Changing video sources and updating UI elements is based on standard HTML5 video element manipulation.  
+  Reference: [MDN Video and Media APIs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement)
+
+### Topic Filter & Mark-as-Revised
+
+- **Dropdown Filter Logic**  
+  Filtering accordion items by category selection uses event listeners and style toggling, following common DOM filtering patterns.  
+  Example: dynamic DOM filtering tutorials.
+
+- **Mark-as-Revised UI Feedback**  
+  Completed items change style and disable buttons to indicate “revised” state, a common UI approach in to-do lists and study apps.
+
+## Summary
+
+This project combines **Bootstrap** and **Font Awesome** for layout and UI components, with **custom JavaScript patterns** for quizzes, hazard perception, filtering, and interactive elements. Specific tutorials referenced include dynamic quiz rendering, Bootstrap accordion usage, and hazard perception-inspired interaction logic.
 
 ---
 
-## Image Sources
+## References / Inspiration Websites
+
+Here is a list of websites that could have served as inspiration for design, UI, and functionality ideas:
+
+1. [CodeHim](https://codehim.com/) – Multiple-choice quiz examples and tutorials  
+2. [Code Explained](https://www.codeexplained.com/) – JS quiz tutorials and progress bar implementations  
+3. [W3Schools](https://www.w3schools.com/) – HTML, CSS, JS references and examples  
+4. [MDN Web Docs](https://developer.mozilla.org/) – HTML5 video, DOM, and localStorage references  
+5. [Theory Pass](https://theorypass.co.uk/) – Hazard perception practice structure  
+6. [Bootstrap Documentation](https://getbootstrap.com/) – Accordion, grid, and utility classes  
+7. [Font Awesome](https://fontawesome.com/) – Icons and decorative elements  
+8. [CSS-Tricks](https://css-tricks.com/) – Front-end layout and interactive element patterns  
+9. [freeCodeCamp](https://www.freecodecamp.org/) – JS interactive tutorials and exercises  
+10. [Stack Overflow](https://stackoverflow.com/) – Problem-solving, event handling, and DOM logic examples
+
+
+
+
+
 
 
 ---
