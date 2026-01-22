@@ -730,9 +730,25 @@ h
 
 ### HTML Validation Results
 
+# W3C Validation Issues
+
+
 
 
 ### CSS Validation Results
+# W3C Validation Issues Explained
+
+- **Trailing slash on void elements**  
+  W3C reports that using a trailing slash (`/`) on void elements like `<link />` or `<img />` has **no effect** and can cause problems if attributes are unquoted.  
+  - Void elements are self-closing by nature in HTML5 (they do not need a separate closing tag or slash).  
+  - Example elements: `<link>`, `<meta>`, `<img>`, `<br>`, `<hr>`.  
+  - Best practice: remove the trailing slash and ensure all attributes are properly quoted.  
+
+- **Stray end tag `</main>`**  
+  This error occurs when an HTML closing tag appears **without a matching opening tag** or is placed incorrectly.  
+  - In this case, `</main>` appeared after a `</section>` that might have already closed the main content.  
+  - Stray end tags can break the document structure, cause unexpected styling, and confuse browsers and validators.  
+  - Best practice: make sure every `<main>` opening tag has one corresponding closing tag in the correct position, wrapping all main content.
 
 |
 
