@@ -173,6 +173,31 @@ const nextBtn = document.getElementById("nextHazardBtn");
 const scoreDisplay = document.getElementById("hazardScoreDisplay");
 const videoCount = document.getElementById("hazardVideoCount");
 
+// ================== RESTART BUTTON DOM REFERENCES ==================
+const restartVideosBtn = document.getElementById("restartVideosBtn");
+const restartBothBtn = document.getElementById("restartBothBtn");
+
+// ================== RESTART BUTTON LOGIC ==================
+
+// Restart hazard videos only
+restartVideosBtn.addEventListener("click", () => {
+  currentHazardIndex = 0;
+  totalScore = 0;
+  clicksThisVideo = 0;
+  validClickRecorded = false;
+
+  video.style.display = "block";
+  nextBtn.style.display = "inline-block";
+  scoreDisplay.innerHTML = "";
+
+  loadHazardVideo(0);
+});
+
+// Restart quiz and hazard perception
+restartBothBtn.addEventListener("click", () => {
+  restartQuiz();
+});
+
 // ================== LOAD HAZARD VIDEO FUNCTION ==================
 // Loads a hazard video and resets click tracking
 function loadHazardVideo(index) {
@@ -206,11 +231,10 @@ function loadHazardVideo(index) {
   }
 
   // Load video source
-const v = hazardVideos[index];
-video.src = v.src;
-video.currentTime = 0;
-video.pause(); //  prevent auto-play
-//   video.play();
+  const v = hazardVideos[index];
+  video.src = v.src;
+  video.currentTime = 0;
+  video.pause(); // prevent auto-play
 
   // Reset click tracking for the new video
   clicksThisVideo = 0;
@@ -259,16 +283,4 @@ nextBtn.addEventListener("click", () => {
 // Load the first hazard video on page load
 loadHazardVideo(currentHazardIndex); 
 
-
-
-
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
+// commit
