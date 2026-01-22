@@ -660,6 +660,38 @@ h
 
 
 ### Button and Link Functionality
+| Button Name / ID                  | Page / Section                 | Intended Function                                                                 | Actual Function                                                                 |
+|----------------------------------|--------------------------------|---------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| Mark as Revised                   | Topics Accordion (all items)  | Mark a topic as revised to track learning progress                               | Currently adds no visual change or state; requires JS to handle marking        |
+| Road Signs Accordion Button       | Topics                        | Expand/collapse Road Signs content                                              | Works: toggles collapse/expand via Bootstrap                                 |
+| Hazard Perception Accordion Button| Topics                        | Expand/collapse Hazard Perception content                                       | Works: toggles collapse/expand via Bootstrap                                 |
+| Speed Awareness Accordion Button  | Topics                        | Expand/collapse Speed Awareness content                                         | Works: toggles collapse/expand via Bootstrap                                 |
+| Rules & Regulations Accordion Btn | Topics                        | Expand/collapse Rules & Regulations content                                     | Works: toggles collapse/expand via Bootstrap                                 |
+| Alertness Accordion Button        | Topics                        | Expand/collapse Alertness content                                               | Works: toggles collapse/expand via Bootstrap                                 |
+| Attitude Accordion Button         | Topics                        | Expand/collapse Attitude content                                                | Works: toggles collapse/expand via Bootstrap                                 |
+| Essential Documents Accordion Btn | Topics                        | Expand/collapse Essential Documents content                                     | Works: toggles collapse/expand via Bootstrap                                 |
+| Hazard Awareness Accordion Btn    | Topics                        | Expand/collapse Hazard Awareness content                                        | Works: toggles collapse/expand via Bootstrap                                 |
+| Incidents, Accidents & Emerg Btn | Topics                        | Expand/collapse Incidents/Accidents/Emergencies content                         | Works: toggles collapse/expand via Bootstrap                                 |
+| Motorway Rules Accordion Button   | Topics                        | Expand/collapse Motorway Rules content                                          | Works: toggles collapse/expand via Bootstrap                                 |
+| Other Types of Vehicle Accordion  | Topics                        | Expand/collapse Other Vehicles content                                          | Works: toggles collapse/expand via Bootstrap                                 |
+| Road and Traffic Signs Accordion  | Topics                        | Expand/collapse Road & Traffic Signs content                                    | Works: toggles collapse/expand via Bootstrap                                 |
+| Rules of the Road Accordion Btn   | Topics                        | Expand/collapse Rules of the Road content                                       | Works: toggles collapse/expand via Bootstrap                                 |
+| Safety and Your Vehicle Accordion | Topics                        | Expand/collapse Safety & Vehicle content                                        | Works: toggles collapse/expand via Bootstrap                                 |
+| Safety Margins Accordion Button   | Topics                        | Expand/collapse Safety Margins content                                          | Works: toggles collapse/expand via Bootstrap                                 |
+| Vehicle Handling Accordion Btn    | Topics                        | Expand/collapse Vehicle Handling content                                        | Works: toggles collapse/expand via Bootstrap                                 |
+| Vehicle Loading Accordion Btn     | Topics                        | Expand/collapse Vehicle Loading content                                         | Works: toggles collapse/expand via Bootstrap                                 |
+| Vulnerable Road Users Accordion   | Topics                        | Expand/collapse Vulnerable Road Users content                                   | Works: toggles collapse/expand via Bootstrap                                 |
+| Restart Quiz                      | Quiz                           | Restart the practice quiz, reset progress bar and answers                        | Works: calls `restartQuiz()` (assumes JS exists)                              |
+| Next Video                        | Hazard Perception              | Go to the next hazard perception video and update score/count                    | Works if JS attached (`nextHazardBtn`)                                        |
+| Restart Videos                     | Hazard Perception              | Restart the hazard perception videos from the first video                        | Works if JS attached (`restartVideosBtn`)                                      |
+| Restart Both                        | Quiz + Hazard Perception      | Restart both the quiz and hazard perception videos                                | Works if JS attached (`restartBothBtn`)                                        |
+| Home (Navbar)                     | All Pages                     | Navigate to homepage                                                            | Works: links to `index.html`                                                 |
+| Topics (Navbar)                   | All Pages                     | Navigate to topics page                                                         | Works: links to `topics.html`                                                |
+| Quiz (Navbar)                     | All Pages                     | Navigate to quiz page                                                           | Works: links to `quiz.html`                                                  |
+| Facebook Icon                     | Footer                        | Navigate to LearnDrive Facebook page                                            | Works: links to Facebook                                                      |
+| Twitter Icon                       | Footer                        | Navigate to LearnDrive Twitter page                                             | Works: links to Twitter                                                      |
+| Instagram Icon                     | Footer                        | Navigate to LearnDrive Instagram page                                           | Works: links to Instagram                                                    |
+| LinkedIn Icon                      | Footer                        | Navigate to LearnDrive LinkedIn page                                            | Works: links to LinkedIn                                                     |
 
 
 
