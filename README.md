@@ -244,7 +244,8 @@ https://drive.google.com/file/d/1eUZCwjDJFrG4EQ0neUAoqjO781Kb-ZPM/view?usp=share
 * W3C Validator
 * MDN
 * Chat GPT 
-* Google Docs
+* Google Docs 
+* JShint
 
 ---
 
@@ -723,19 +724,27 @@ h
 
 ---
 
-# HTML and CSS Validation
+# HTML,CSS Javascript Validation
+### javascript Validation Results
+
+# Jshint Validation Issues
+
+
+### CSS Validation Results
+
+# W3C Validation Issues
+**CSS Validation Issue**
+
+- **File / URI:** https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css  
+- **Line:** 6  
+- **Selector:** `.fa-rotate-by`  
+- **Issue:** `var(--fa-rotate-angle, none)` is not a valid transform value.  
+- **Description:** The CSS rule `rotate(var(--fa-rotate-angle, none))` uses a CSS variable with a fallback of `none`, which is not recognized as a valid rotation value by the W3C CSS validator.
 
 
 
 
 ### HTML Validation Results
-
-# W3C Validation Issues
-
-
-
-
-### CSS Validation Results
 # W3C Validation Issues Explained
 
 - **Trailing slash on void elements**  
