@@ -250,33 +250,24 @@ https://drive.google.com/file/d/1eUZCwjDJFrG4EQ0neUAoqjO781Kb-ZPM/view?usp=share
 ---
 
 # File Structure 
-├── 404.html
-├── README.md
-├── assets
-│   ├── css
-│   │   └── style.css
-│   ├── images
-│   │   ├── children.jpg
-│   │   ├── left.jpg
-│   │   ├── no-entry.jpeg
-│   │   ├── one-way.jpg
-│   │   ├── parking.jpg
-│   │   ├── speed-bump.jpeg
-│   │   ├── speed.jpg
-│   │   ├── stop-sign.jpg
-│   │   └── warning.jpeg
-│   ├── js
-│   │   ├── app.js
-│   │   ├── quiz.js
-│   │   └── topics.js
-│   └── videos
-│       ├── hazard-1.mp4
-│       ├── hazard-2.mp4
-│       └── hazard-3.mp4
-├── index.html
-├── quiz.html
-├── test.html
-└── topics.html
+learn-drive  
+│  
+├── index.html  
+├──  
+├──  
+│── 
+├── 
+├
+├── assets  
+│   ├──  
+│   ├──  
+│   ├──  
+│   │  
+│   ├
+│   │   
+└── README.md
+
+---
 
 
 
@@ -727,6 +718,29 @@ h
 ### javascript Validation Results
 
 # Jshint Validation Issues
+# JS Code Fixes & Improvements
+
+
+- **Accordion Filtering Bug**
+  - Previously, filtering topics did not collapse open accordion items.
+  - Fixed by automatically collapsing any open accordion (`.accordion-collapse.show`) when a filter is applied.
+
+- **“Mark as Revised” Background Transition**
+  - Rapid clicks skipped the background transition effect.
+  - Fixed by:
+    - Setting `body.style.transition` **before** changing the background color.
+    - Adding a slight delay (`setTimeout` of 50ms) before applying the background color to ensure the transition triggers.
+
+- **Button State Update**
+  - After marking a topic as revised:
+    - Button text changes to `"Revised"`.
+    - Button is disabled to prevent multiple clicks.
+
+- **Code Organization**
+  - Grouped related logic together for better readability:
+    - Filtering logic includes collapsing open accordions.
+    - “Mark as Revised” logic handles transition and button update.
+
 
 
 ### CSS Validation Results
@@ -795,7 +809,7 @@ The images used in **Learn Drive** are sourced from the following websites:
 ---
 
 ## Video Sources
-https://www.youtube.com/watch?v=Y4CU4k4u3Vc&pp=ygUXdGhlb3J5IHRlc3QgdmlkZW8gY2xpcHM%3D
+* https://www.youtube.com/watch?v=Y4CU4k4u3Vc&pp=ygUXdGhlb3J5IHRlc3QgdmlkZW8gY2xpcHM%3D
 ---
 
 # Additional Notes
