@@ -14,7 +14,7 @@
 - [Testing and Bugs](#testing-and-bugs)
   - [Manual Testing](#manual-testing)
   - [Lighthouse Testing](#lighthouse-testing)
-  - [HTML and CSS Validation](#html-and-css-validation)
+  - [HTML ,CSS and JS Validation](#html-and-css-validation)
 - [Attributions](#attributions)
 - [Additional Notes](#additional-notes)
 - [Author](#author)
@@ -149,7 +149,12 @@ Key considerations for this audience:
 
 ---
 
-## Responsive Design Preview
+## Responsive Design Preview 
+[Screenshots](assets/images/homepage.jpg) 
+[Screenshots](assets/images/topics-screenshot.jpg) 
+[Screenshots](assets/images/mobile%20screenshot.jpg) 
+[Screenshots](assets/images/mobile-screenshot-three.jpg) 
+[Screenshots](assets/images/mobile-screenshot-two.jpg)
 
 
 
@@ -231,36 +236,36 @@ https://drive.google.com/file/d/1eUZCwjDJFrG4EQ0neUAoqjO781Kb-ZPM/view?usp=share
 ---
 
 # File Structure 
-├── 404.html
+├├── 404.html
 ├── README.md
 ├── assets
 │   ├── css
 │   │   └── style.css
 │   ├── images
-│   │   ├── Image 22-01-2026 at 21.13.jpg
-│   │   ├── Image 22-01-2026 at 21.15.jpg
-│   │   ├── Image 22-01-2026 at 22.06.jpg
-│   │   ├── Image 22-01-2026 at 22.08 (1).jpg
-│   │   ├── Image 22-01-2026 at 22.08 2.jpg
-│   │   ├── Image 22-01-2026 at 22.08.jpg
-│   │   ├── Image 22-01-2026 at 22.09 2.jpg
-│   │   ├── Image 22-01-2026 at 22.09.jpg
-│   │   ├── Image 22-01-2026 at 22.10 2.jpg
-│   │   ├── Image 22-01-2026 at 22.10.jpg
-│   │   ├── Image 22-01-2026 at 22.14 2.jpg
-│   │   ├── Image 22-01-2026 at 22.14.jpg
-│   │   ├── Image 22-01-2026 at 22.15.jpg
-│   │   ├── Image 22-01-2026 at 22.16.jpg
-│   │   ├── Image 22-01-2026 at 22.17.jpg
-│   │   ├── Image 22-01-2026 at 22.18.jpg
+│   │   ├── accordion-test-two.jpg
+│   │   ├── accordion-test.jpg
 │   │   ├── children.jpg
+│   │   ├── completed -quiz.jpg
+│   │   ├── completed-quiz-hazard.jpg
+│   │   ├── css-wc3.jpg
+│   │   ├── homepage.jpg
+│   │   ├── html-wc3.jpg
 │   │   ├── left.jpg
+│   │   ├── lighthouse-index.jpg
+│   │   ├── lighthouse-quiz.jpg
+│   │   ├── ligthouse-topics.jpg
+│   │   ├── mobile screenshot.jpg
+│   │   ├── mobile-screenshot-three.jpg
+│   │   ├── mobile-screenshot-two.jpg
 │   │   ├── no-entry.jpeg
 │   │   ├── one-way.jpg
 │   │   ├── parking.jpg
+│   │   ├── quiz-tes.jpg
+│   │   ├── quiz-test-two.jpg
 │   │   ├── speed-bump.jpeg
 │   │   ├── speed.jpg
 │   │   ├── stop-sign.jpg
+│   │   ├── topics-screenshot.jpg
 │   │   └── warning.jpeg
 │   ├── js
 │   │   ├── app.js
