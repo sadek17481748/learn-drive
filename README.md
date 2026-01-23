@@ -231,22 +231,49 @@ https://drive.google.com/file/d/1eUZCwjDJFrG4EQ0neUAoqjO781Kb-ZPM/view?usp=share
 ---
 
 # File Structure 
-learn-drive  
-│  
-├── index.html  
-├──  
-├──  
-│── 
-├── 
-├
-├── assets  
-│   ├──  
-│   ├──  
-│   ├──  
-│   │  
-│   ├
-│   │   
-└── README.md
+├── 404.html
+├── README.md
+├── assets
+│   ├── css
+│   │   └── style.css
+│   ├── images
+│   │   ├── Image 22-01-2026 at 21.13.jpg
+│   │   ├── Image 22-01-2026 at 21.15.jpg
+│   │   ├── Image 22-01-2026 at 22.06.jpg
+│   │   ├── Image 22-01-2026 at 22.08 (1).jpg
+│   │   ├── Image 22-01-2026 at 22.08 2.jpg
+│   │   ├── Image 22-01-2026 at 22.08.jpg
+│   │   ├── Image 22-01-2026 at 22.09 2.jpg
+│   │   ├── Image 22-01-2026 at 22.09.jpg
+│   │   ├── Image 22-01-2026 at 22.10 2.jpg
+│   │   ├── Image 22-01-2026 at 22.10.jpg
+│   │   ├── Image 22-01-2026 at 22.14 2.jpg
+│   │   ├── Image 22-01-2026 at 22.14.jpg
+│   │   ├── Image 22-01-2026 at 22.15.jpg
+│   │   ├── Image 22-01-2026 at 22.16.jpg
+│   │   ├── Image 22-01-2026 at 22.17.jpg
+│   │   ├── Image 22-01-2026 at 22.18.jpg
+│   │   ├── children.jpg
+│   │   ├── left.jpg
+│   │   ├── no-entry.jpeg
+│   │   ├── one-way.jpg
+│   │   ├── parking.jpg
+│   │   ├── speed-bump.jpeg
+│   │   ├── speed.jpg
+│   │   ├── stop-sign.jpg
+│   │   └── warning.jpeg
+│   ├── js
+│   │   ├── app.js
+│   │   ├── quiz.js
+│   │   └── topics.js
+│   └── videos
+│       ├── hazard-1.mp4
+│       ├── hazard-2.mp4
+│       └── hazard-3.mp4
+├── index.html
+├── quiz.html
+├── test.html
+└── topics.html
 
 ---
 
@@ -724,13 +751,10 @@ for quiz.js ran out of time
 
 ---
 
-# Attributions
+
 
 
 # Sources & References
-# Code Attributions
-
-## HTML & UI Structure
 
 - **Bootstrap 5 Accordion Component**  
   The topics accordion and collapse behavior use Bootstrap’s accordion pattern, which organizes content into vertically collapsible panels.  
