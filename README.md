@@ -449,7 +449,7 @@ This approach helped keep the project organised and made it easier to add new fe
 
 # Deployment
 
-## Local Development Environment
+## Local Development Environment 
 
 
 ## Version Control Using Git
@@ -727,7 +727,10 @@ for quiz.js ran out of time
 - **Line:** 6  
 - **Selector:** `.fa-rotate-by`  
 - **Issue:** `var(--fa-rotate-angle, none)` is not a valid transform value.  
-- **Description:** The CSS rule `rotate(var(--fa-rotate-angle, none))` uses a CSS variable with a fallback of `none`, which is not recognized as a valid rotation value by the W3C CSS validator.
+- **Description:** The CSS rule `rotate(var(--fa-rotate-angle, none))` uses a CSS variable with a fallback of `none`, which is not recognized as a valid rotation value by the W3C CSS validator.  
+
+![Validator Screenshots](assets/images/css-wc3.jpg)
+
 
 
 
@@ -747,7 +750,8 @@ for quiz.js ran out of time
   - Stray end tags can break the document structure, cause unexpected styling, and confuse browsers and validators.  
   - Best practice: make sure every `<main>` opening tag has one corresponding closing tag in the correct position, wrapping all main content.
 
-|
+   ![Validator Screenshots](assets/images/html-wc3.jpg) 
+   
 
 ---
 
@@ -863,7 +867,9 @@ The images used in **Learn Drive** are sourced from the following websites:
 ---
 
 ## Video Sources
-* https://www.youtube.com/watch?v=Y4CU4k4u3Vc&pp=ygUXdGhlb3J5IHRlc3QgdmlkZW8gY2xpcHM%3D
+* https://www.youtube.com/watch?v=Y4CU4k4u3Vc&pp=ygUXdGhlb3J5IHRlc3QgdmlkZW8gY2xpcHM%3D  
+
+* Video was split into three using Macbook internal photo app. The video split and save feature was used to split the video.
 ---
 
 # Additional Notes
