@@ -150,11 +150,12 @@ Key considerations for this audience:
 ---
 
 ## Responsive Design Preview 
-[Screenshots](assets/images/homepage.jpg) 
-[Screenshots](assets/images/topics-screenshot.jpg) 
-[Screenshots](assets/images/mobile%20screenshot.jpg) 
-[Screenshots](assets/images/mobile-screenshot-three.jpg) 
-[Screenshots](assets/images/mobile-screenshot-two.jpg)
+![Screenshots](assets/images/homepage.jpg)
+![Screenshots](assets/images/topics-screenshot.jpg)
+![Screenshots](assets/images/mobile%20screenshot.jpg)
+![Screenshots](assets/images/mobile-screenshot-three.jpg)
+![Screenshots](assets/images/mobile-screenshot-two.jpg) 
+![image](assets/images/final-quiz.jpg)
 
 
 
