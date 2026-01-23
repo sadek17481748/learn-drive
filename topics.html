@@ -32,10 +32,12 @@
 <!-- ================= NAVBAR ================= -->
 <header class="fixed-top bg-dark text-white p-3" role="banner">
     <div class="container d-flex justify-content-between align-items-center">
+      <!-- Site branding -->
       <h1 class="h4 mb-0">LearnDrive</h1>
-      <nav role="navigation" aria-label="Main navigation">
+      <!-- Navigation links -->
+      <nav aria-label="Main Navigation">
         <a href="index.html" class="text-white me-3">Home</a>
-        <a href="topics.html" class="text-white me-3" aria-current="page">Topics</a>
+        <a href="topics.html" class="text-white me-3">Topics</a>
         <a href="quiz.html" class="text-white">Quiz</a>
       </nav>
     </div>
@@ -43,11 +45,11 @@
 
 
 <!-- ===== MAIN CONTENT ===== -->
-<main class="mt-5 pt-5">
+<main class="mt-5 pt-5" role="main" aria-label="Topics Main Content">
 
   <!-- ===== TOPICS SECTION ===== -->
-  <section class="container my-5" aria-labelledby="topicsHeading">
-    <h2 class="text-center mb-4" id="topicsHeading">Learning Topics</h2>
+  <section class="container my-5" role="region" aria-labelledby="topicsHeading">
+    <h2 id="topicsHeading" class="text-center mb-4">Learning Topics</h2>
 
     <!-- ===== FILTER BY CATEGORY ===== -->
     <div class="mb-4 text-center">
@@ -65,25 +67,26 @@
     <!-- ===== TOPICS ACCORDION LIST ===== -->
     <div id="topicsList" class="accordion" aria-label="Topics Accordion">
 
-      <!-- Example Accordion Item -->
+      <!-- ===== Accordion Item: Road Signs ===== -->
       <div class="accordion-item" data-category="road-signs">
         <h2 class="accordion-header" id="headingOne">
           <button class="accordion-button collapsed" type="button"
                   data-bs-toggle="collapse"                         
                   data-bs-target="#collapseOne"       
                   aria-expanded="false"               
-                  aria-controls="collapseOne">        
+                  aria-controls="collapseOne" 
+                  aria-label="Expand Road Signs topic">        
             Road Signs
           </button>
         </h2> 
         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#topicsList">
-          <div class="accordion-body">
+          <div class="accordion-body" role="region" aria-label="Road Signs content">
             <p>Road signs provide essential guidance, warnings, and regulations to ensure safe and smooth traffic flow...</p>
             <p>See below a link to the DVLA official signs for practice:</p> 
             <p>
               Download the official traffic signs guide: 
               <a href="https://assets.publishing.service.gov.uk/media/560aa95b40f0b6036a00002a/the-highway-code-traffic-signs.pdf" 
-                 target="_blank" rel="noopener noreferrer" aria-label="Open Highway Code Traffic Signs PDF in a new tab">
+                 target="_blank" rel="noopener noreferrer">
                 The Highway Code – Traffic Signs (PDF)
               </a>
             </p>
@@ -92,37 +95,85 @@
               <li><strong>Regulatory:</strong> Circular, white/red or blue, instructs what to do or not do.</li>
               <li><strong>Informational:</strong> Rectangular, provides guidance, directions, or facilities.</li>
             </ul>
-            <button class="btn btn-dark mark-btn mt-2" aria-label="Mark Road Signs topic as revised">Mark as Revised</button>
+            <button class="btn btn-dark mark-btn mt-2" aria-label="Mark Road Signs as Revised">Mark as Revised</button>
           </div>
         </div>
       </div>
-
-      <!-- Repeat ARIA updates for all other accordion items similarly -->
-      <!-- Example: Hazard Perception -->
+  
+      <!-- ===== Accordion Item: Hazard Perception ===== -->
       <div class="accordion-item" data-category="hazards">
         <h2 class="accordion-header" id="headingTwo">
           <button class="accordion-button collapsed" type="button"
                   data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                  aria-expanded="false" aria-controls="collapseTwo">
+                  aria-expanded="false" aria-controls="collapseTwo"
+                  aria-label="Expand Hazard Perception topic">
             Hazard Perception
           </button>
         </h2>
         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#topicsList">
-          <div class="accordion-body">
-            <p>Hazard perception teaches learners to anticipate potential dangers on the road.</p>
-            <button class="btn btn-dark mark-btn mt-2" aria-label="Mark Hazard Perception topic as revised">Mark as Revised</button>
+          <div class="accordion-body" role="region" aria-label="Hazard Perception content">
+            <p>Hazard perception teaches learners to anticipate potential dangers on the road...</p>
+            <ul>
+              <li>Scan the road constantly for pedestrians, cyclists, and obstacles.</li>
+              <li>Identify hazards early to maintain safe control of your vehicle.</li>
+              <li>Anticipate how other drivers or road users might behave.</li>
+            </ul>
+            <button class="btn btn-dark mark-btn mt-2" aria-label="Mark Hazard Perception as Revised">Mark as Revised</button>
           </div>
         </div>
       </div>
 
-      <!-- All remaining accordion items follow same ARIA pattern -->
-      <!-- Each 'Mark as Revised' button has aria-label describing the topic -->
-      <!-- Each <a> link has aria-label describing its action -->
-      <!-- Each accordion button includes aria-expanded and aria-controls attributes -->
-      
+      <!-- ===== Accordion Item: Speed Awareness ===== -->
+      <div class="accordion-item" data-category="speed">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                  aria-expanded="false" aria-controls="collapseThree"
+                  aria-label="Expand Speed Awareness topic">
+            Speed Awareness
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#topicsList">
+          <div class="accordion-body" role="region" aria-label="Speed Awareness content">
+            <p>Understanding speed limits and adjusting speed for road conditions is vital for safety...</p>
+            <ul>
+              <li>Follow posted speed limits strictly.</li>
+              <li>Adjust speed for weather, traffic, and road surface conditions.</li>
+              <li>Maintain safe stopping distances based on speed.</li>
+            </ul>
+            <button class="btn btn-dark mark-btn mt-2" aria-label="Mark Speed Awareness as Revised">Mark as Revised</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Accordion Item: Rules & Regulations ===== -->
+      <div class="accordion-item" data-category="rules">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                  aria-expanded="false" aria-controls="collapseFour"
+                  aria-label="Expand Rules & Regulations topic">
+            Rules & Regulations
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#topicsList">
+          <div class="accordion-body" role="region" aria-label="Rules & Regulations content">
+            <p>The Highway Code provides a comprehensive set of rules for all road users...</p>
+            <ul>
+              <li>Always follow speed limits and traffic signals.</li>
+              <li>Understand priority and right-of-way rules.</li>
+              <li>Comply with legal requirements for licensing, insurance, and vehicle condition.</li>
+            </ul>
+            <button class="btn btn-dark mark-btn mt-2" aria-label="Mark Rules & Regulations as Revised">Mark as Revised</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- All other accordion items go here with same ARIA updates -->
+      <!-- ... Repeat aria-label="Expand <Topic>" on button and role="region" aria-label="<Topic> content" on accordion-body, mark-btn gets aria-label="Mark <Topic> as Revised" -->
+
     </div>
   </section>
-</main>
 
 <!-- ===== FOOTER ===== -->
 <footer class="bg-dark text-white text-center py-4" role="contentinfo">
@@ -130,16 +181,16 @@
   <p class="mb-2">Supporting learner drivers across the UK</p>
 
   <!-- Social Icons -->
-  <a href="https://www.facebook.com" target="_blank" class="text-white me-2" aria-label="Facebook page">
+  <a href="https://www.facebook.com" target="_blank" class="text-white me-2" aria-label="Visit our Facebook page">
       <i class="fab fa-facebook-f"></i>
   </a>
-  <a href="404.html" class="text-white me-2" aria-label="Twitter page (placeholder link)">
+  <a href="404.html" class="text-white me-2" aria-label="Visit our Twitter page">
       <i class="fab fa-twitter"></i>
   </a>
-  <a href="https://www.instagram.com" target="_blank" class="text-white me-2" aria-label="Instagram page">
+  <a href="https://www.instagram.com" target="_blank" class="text-white me-2" aria-label="Visit our Instagram page">
       <i class="fab fa-instagram"></i>
   </a>
-  <a href="https://www.linkedin.com" target="_blank" class="text-white" aria-label="LinkedIn page">
+  <a href="https://www.linkedin.com" target="_blank" class="text-white" aria-label="Visit our LinkedIn page">
       <i class="fab fa-linkedin-in"></i>
   </a>
 </footer>

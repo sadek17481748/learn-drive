@@ -621,40 +621,41 @@ Automated testing would be more suitable if the project were expanded to include
 
 ## Bug Tracking & Resolution Log 
 
-| Bug ID | Bug Description | Issue Identified | Fix Implemented | Resolved | Manual Testing Performed |
-|--------|----------------|-----------------|----------------|----------|------------------------|
-| B01 | Quiz produced no response | Quiz logic existed but was never triggered by user interaction | Connected quiz logic to UI using event listeners | Yes | Clicked quiz options and verified logic execution via console |
-| B02 | Hardcoded correct answer | Quiz always validated against the same answer | Moved correct answers into `quizQuestions` array | Yes | Selected different options and verified correct scoring |
-| B03 | User input not read correctly | DOM element passed instead of its value/text | Used `.textContent` and `.value` correctly | Yes | Logged user input values during selection |
-| B04 | Case sensitivity error | Correct answers failed due to uppercase/lowercase mismatch | Normalised input using `toLowerCase()` | Yes | Tested answers with mixed casing |
-| B05 | Whitespace input error | Leading/trailing spaces caused valid answers to fail | Applied `trim()` to user input | Yes | Entered answers with extra spaces |
-| B06 | Function parameter unused | Function accepted input but ignored it | Updated comparison logic to use function parameter | Yes | Passed different values and verified outcomes |
-| B07 | Incorrect conditional logic | Variable compared to itself, always returning true | Corrected conditional comparison | Yes | Tested correct and incorrect answers |
-| B08 | Multiple answer submissions allowed | Users could click options multiple times | Disabled all buttons after first selection | Yes | Attempted multiple clicks per question |
-| B09 | No visual feedback on answers | Users could not see correct/incorrect answers | Added CSS classes for visual feedback | Yes | Selected answers and verified colour changes |
-| B10 | Progress bar not updating | Progress bar remained static | Added dynamic progress calculation | Yes | Completed quiz and observed progress updates |
-| B11 | Quiz score lost on reload | Score not persisted between sections | Stored score using `localStorage` | Yes | Reloaded page and checked stored score |
-| B12 | External JS file broke quiz | Script loaded before DOM elements | Moved script to bottom of HTML | Yes | Reloaded page and verified quiz functionality |
-| B13 | Hazard video click spamming | Users could spam-click to inflate score | Limited clicks and added validation flag | Yes | Rapidly clicked video to test limits |
-| B14 | Hazard scored outside valid window | Clicks outside hazard zone awarded points | Enforced strict time window checks | Yes | Clicked before and after hazard window |
-| B15 | No reaction-time weighting | All hazard clicks gave same score | Implemented DVSA-style scoring system | Yes | Clicked at different times to test scoring |
-| B16 | Hazard videos did not advance | “Next Video” button had no effect | Corrected hazard index increment | Yes | Clicked next button across videos |
-| B17 | No final results screen | App ended abruptly after last video | Added combined results summary | Yes | Completed full quiz and hazard sequence |
-| B18 | Footer not fixed to bottom | Visible gap under footer on short pages | Applied flexbox layout to body/footer | Yes | Viewed page with minimal content |
-| B19 | Duplicate quiz questions | Questions appeared more than once | Cleaned and reviewed question array | Yes | Completed quiz and checked repetitions |
-| B20 | Restart did not reset hazard state | Hazard data persisted after restart | Reset all hazard variables on restart | Yes | Restarted quiz and hazard section |
-| B21 | `<!DOCTYPE html>` inside JS | HTML doctype incorrectly appears inside JS file | Moved `<!DOCTYPE html>` to top of HTML file and removed from JS | Yes | Opened page and confirmed no console parse errors |
-| B22 | Stray backslash in `<head>` | Extra `\` caused HTML parsing warning | Removed stray character from `<head>` | Yes | Inspected `<head>` and verified clean console |
-| B23 | Hazard video count mismatch | Static count didn’t match actual videos | Set total dynamically using `hazardVideos.length` | Yes | Observed correct video count during playback |
-| B24 | Shadowed `quizScore` variable | Local variable overwrote global score | Removed local redeclaration | Yes | Completed quiz and hazard sections and verified totals |
-| B25 | Video `<source>` overridden | HTML `<source>` conflicted with JS `video.src` | Standardised video source handling | Yes | Inspected video element and network activity |
-| B26 | Progress bar doesn’t reach 100% | Final question not included in calculation | Updated percentage formula | Yes | Observed progress reach 100% on last question |
-| B27 | Click hazard video before play | Early clicks incorrectly counted | Added paused-state guard | Yes | Clicked before play and confirmed no score change |
-| B28 | Duplicate `No honking` question | Question appeared more than once | Removed duplicates from array | Yes | Reviewed full quiz flow |
-| B29 | Missing alt text for images | Images lacked accessibility descriptions | Added descriptive `alt` attributes | Yes | Inspected DOM and validated alt text |
-| B30 | Next button visible after last video | Button remained after final hazard clip | Hid button at end of array | Yes | Completed hazard section |
-| B31 | JS console errors on reload | Script ran before DOM loaded | Wrapped logic in `DOMContentLoaded` | Yes | Reloaded page and checked console |
-| B32 | Hazard video auto-plays on page load | Video played without user input | Removed forced `video.play()` call | Yes | Reloaded page and confirmed manual playback |
+| Bug ID | Bug Description | Issue Identified | Fix Implemented | Resolved | Manual Testing Performed | AI Assistance |
+|--------|----------------|-----------------|----------------|----------|------------------------|---------------|
+| B01 | Quiz produced no response | Quiz logic existed but was never triggered by user interaction | Connected quiz logic to UI using event listeners | Yes | Clicked quiz options and verified logic execution via console | Yes |
+| B02 | Hardcoded correct answer | Quiz always validated against the same answer | Moved correct answers into `quizQuestions` array | Yes | Selected different options and verified correct scoring | No |
+| B03 | User input not read correctly | DOM element passed instead of its value/text | Used `.textContent` and `.value` correctly | Yes | Logged user input values during selection | Yes |
+| B04 | Case sensitivity error | Correct answers failed due to uppercase/lowercase mismatch | Normalised input using `toLowerCase()` | Yes | Tested answers with mixed casing | Yes |
+| B05 | Whitespace input error | Leading/trailing spaces caused valid answers to fail | Applied `trim()` to user input | Yes | Entered answers with extra spaces | No |
+| B06 | Function parameter unused | Function accepted input but ignored it | Updated comparison logic to use function parameter | Yes | Passed different values and verified outcomes | Yes |
+| B07 | Incorrect conditional logic | Variable compared to itself, always returning true | Corrected conditional comparison | Yes | Tested correct and incorrect answers | Yes |
+| B08 | Multiple answer submissions allowed | Users could click options multiple times | Disabled all buttons after first selection | Yes | Attempted multiple clicks per question | No |
+| B09 | No visual feedback on answers | Users could not see correct/incorrect answers | Added CSS classes for visual feedback | Yes | Selected answers and verified colour changes | No |
+| B10 | Progress bar not updating | Progress bar remained static | Added dynamic progress calculation | Yes | Completed quiz and observed progress updates | No |
+| B11 | Quiz score lost on reload | Score not persisted between sections | Stored score using `localStorage` | Yes | Reloaded page and checked stored score | No |
+| B12 | External JS file broke quiz | Script loaded before DOM elements | Moved script to bottom of HTML | Yes | Reloaded page and verified quiz functionality | Yes |
+| B13 | Hazard video click spamming | Users could spam-click to inflate score | Limited clicks and added validation flag | Yes | Rapidly clicked video to test limits | No |
+| B14 | Hazard scored outside valid window | Clicks outside hazard zone awarded points | Enforced strict time window checks | Yes | Clicked before and after hazard window | Yes |
+| B15 | No reaction-time weighting | All hazard clicks gave same score | Implemented DVSA-style scoring system | Yes | Clicked at different times to test scoring | No |
+| B16 | Hazard videos did not advance | “Next Video” button had no effect | Corrected hazard index increment | Yes | Clicked next button across videos | Yes |
+| B17 | No final results screen | App ended abruptly after last video | Added combined results summary | Yes | Completed full quiz and hazard sequence | No |
+| B18 | Footer not fixed to bottom | Visible gap under footer on short pages | Applied flexbox layout to body/footer | Yes | Viewed page with minimal content | No |
+| B19 | Duplicate quiz questions | Questions appeared more than once | Cleaned and reviewed question array | Yes | Completed quiz and checked repetitions | No |
+| B20 | Restart did not reset hazard state | Hazard data persisted after restart | Reset all hazard variables on restart | Yes | Restarted quiz and hazard section | Yes |
+| B21 | `<!DOCTYPE html>` inside JS | HTML doctype incorrectly appears inside JS file | Moved `<!DOCTYPE html>` to top of HTML file and removed from JS | Yes | Opened page and confirmed no console parse errors | Yes |
+| B22 | Stray backslash in `<head>` | Extra `\` caused HTML parsing warning | Removed stray character from `<head>` | Yes | Inspected `<head>` and verified clean console | No |
+| B23 | Hazard video count mismatch | Static count didn’t match actual videos | Set total dynamically using `hazardVideos.length` | Yes | Observed correct video count during playback | Yes |
+| B24 | Shadowed `quizScore` variable | Local variable overwrote global score | Removed local redeclaration | Yes | Completed quiz and hazard sections and verified totals | Yes |
+| B25 | Video `<source>` overridden | HTML `<source>` conflicted with JS `video.src` | Standardised video source handling | Yes | Inspected video element and network activity | Yes |
+| B26 | Progress bar doesn’t reach 100% | Final question not included in calculation | Updated percentage formula | Yes | Observed progress reach 100% on last question | No |
+| B27 | Click hazard video before play | Early clicks incorrectly counted | Added paused-state guard | Yes | Clicked before play and confirmed no score change | Yes |
+| B28 | Duplicate `No honking` question | Question appeared more than once | Removed duplicates from array | Yes | Reviewed full quiz flow | No |
+| B29 | Missing alt text for images | Images lacked accessibility descriptions | Added descriptive `alt` attributes | Yes | Inspected DOM and validated alt text | Yes |
+| B30 | Next button visible after last video | Button remained after final hazard clip | Hid button at end of array | Yes | Completed hazard section | No |
+| B31 | JS console errors on reload | Script ran before DOM loaded | Wrapped logic in `DOMContentLoaded` | Yes | Reloaded page and checked console | Yes |
+| B32 | Hazard video auto-plays on page load | Video played without user input | Removed forced `video.play()` call | Yes | Reloaded page and confirmed manual playback | Yes |
+
 
 
 
