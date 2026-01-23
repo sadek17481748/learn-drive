@@ -236,49 +236,57 @@ https://drive.google.com/file/d/1eUZCwjDJFrG4EQ0neUAoqjO781Kb-ZPM/view?usp=share
 ---
 
 # File Structure 
-├├── 404.html
-├── README.md
-├── assets
-│   ├── css
-│   │   └── style.css
-│   ├── images
-│   │   ├── accordion-test-two.jpg
-│   │   ├── accordion-test.jpg
-│   │   ├── children.jpg
-│   │   ├── completed -quiz.jpg
-│   │   ├── completed-quiz-hazard.jpg
-│   │   ├── css-wc3.jpg
-│   │   ├── homepage.jpg
-│   │   ├── html-wc3.jpg
-│   │   ├── left.jpg
-│   │   ├── lighthouse-index.jpg
-│   │   ├── lighthouse-quiz.jpg
-│   │   ├── ligthouse-topics.jpg
-│   │   ├── mobile screenshot.jpg
-│   │   ├── mobile-screenshot-three.jpg
-│   │   ├── mobile-screenshot-two.jpg
-│   │   ├── no-entry.jpeg
-│   │   ├── one-way.jpg
-│   │   ├── parking.jpg
-│   │   ├── quiz-tes.jpg
-│   │   ├── quiz-test-two.jpg
-│   │   ├── speed-bump.jpeg
-│   │   ├── speed.jpg
-│   │   ├── stop-sign.jpg
-│   │   ├── topics-screenshot.jpg
-│   │   └── warning.jpeg
-│   ├── js
-│   │   ├── app.js
-│   │   ├── quiz.js
-│   │   └── topics.js
-│   └── videos
-│       ├── hazard-1.mp4
-│       ├── hazard-2.mp4
-│       └── hazard-3.mp4
-├── index.html
-├── quiz.html
-├── test.html
-└── topics.html
+Here's your file structure converted into a markdown table:
+
+| Folder / File Path                   | Description / Notes                     |
+|--------------------------------------|----------------------------------------|
+| **LearnDrive/**                     | Root directory                         |
+| &nbsp;&nbsp;├── 404.html            | HTML file                              |
+| &nbsp;&nbsp;├── index.html            | HTML file                              |
+| &nbsp;&nbsp;├── topics.html           | HTML file                              |
+| &nbsp;&nbsp;├── quiz.html             | HTML file                              |
+| &nbsp;&nbsp;├── test.html             | HTML file                              |
+| &nbsp;&nbsp;├── README.md               | Markdown readme file                   |
+| &nbsp;&nbsp;├── assets/                 | Assets folder                          |
+| &nbsp;&nbsp;&nbsp;&nbsp;├── css/        | CSS assets directory                   |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── style.css | CSS stylesheet                     |
+| &nbsp;&nbsp;&nbsp;&nbsp;├── js/         | JavaScript assets directory            |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── app.js | JavaScript file                     |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── quiz.js | JavaScript file                     |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── topics.js | JavaScript file                     |
+| &nbsp;&nbsp;&nbsp;&nbsp;├── images/     | Images directory                       |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── accordion-test.jpg | Image file                  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── accordion-test-two.jpg | Image file             |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── children.jpg | Image file                        |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── completed-quiz.jpg | Image file                |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── completed-quiz-hazard.jpg | Image file            |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── css-wc3.jpg | Image file                        |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── html-wc3.jpg | Image file                        |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── homepage.jpg | Image file                        |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── js-hint-quiz.jpg | Image file                     |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── js-hint-topic.jpg | Image file                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── lighthouse-index.jpg | Image file                   |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── lighthouse-quiz.jpg | Image file                   |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── lighthouse-topics.jpg | Image file                  |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── mobile-screenshot.jpg | Image file                   |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── mobile-screenshot-two.jpg | Image file               |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── mobile-screenshot-three.jpg | Image file             |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── no-entry.jpeg | Image file                        |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── one-way.jpg | Image file                          |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── parking.jpg | Image file                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── quiz-test.jpg | Image file                        |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── quiz-test-two.jpg | Image file                    |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── speed.jpg | Image file                          |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── speed-bump.jpeg | Image file                      |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── stop-sign.jpg | Image file                        |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── topics-screenshot.jpg | Image file                   |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── warning.jpeg | Image file                         |
+| &nbsp;&nbsp;&nbsp;&nbsp;└── videos/        | Videos directory                       |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── hazard-1.mp4 | Video file                        |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── hazard-2.mp4 | Video file                        |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── hazard-3.mp4 | Video file                        |
+
+Let me know if you'd like it in a different format or with additional details!
 
 ---
 
@@ -456,32 +464,50 @@ This approach helped keep the project organised and made it easier to add new fe
 
 ## Local Development Environment 
 
-
 ## Version Control Using Git
 
-Version control was managed using **Git**. This allowed me to track changes to the project over time, revert to previous versions if needed, and maintain a clear history of development progress. The workflow included:
+Version control for this project was managed using **Git**, allowing me to track changes, maintain a clear development history, and safely back up my work throughout the project.
 
-1. **Initialising Git**: The local project folder was initialised as a Git repository using `git init`.  
-2. **Staging Changes**: After making changes to files, I staged them using:
- *git add .*
-This added all new or modified files to the staging area in preparation for committing.  
-3. **Committing Changes**: Commits were made regularly with descriptive messages summarising the changes:  
-git commit -m "Add homepage layout and carousel functionality"
-4. **Pushing to Remote Repository**: Changes were then pushed to the remote repository on GitHub to keep the online version up-to-date:
-This process was repeated continuously during development to ensure that every key change was backed up and versioned.
-git push
+Instead of initialising Git locally, I first created the repository directly on **GitHub** and then connected it to Visual Studio Code using the HTTPS clone link. This approach proved more reliable than my previous workflow and avoided setup issues experienced in earlier projects. 
+https://github.com/sadek17481748/learn-drive.git
+
+The workflow used during development was as follows:
+
+- The GitHub repository was cloned into VS Code using the HTTPS URL:
+- Once the repository was cloned, all development was carried out locally within VS Code.
+- After making changes to files, they were staged using: 
+- git add . , git commit -m"comment" and git push to got directly to repository. 
+
+
+This process was repeated regularly throughout development to ensure all progress was saved and versioned correctly.
+
+---
+
 ## Creating the GitHub Repository
 
-A **GitHub account** was created to host the project remotely. The repository was created with the following steps:
+The GitHub repository was created before development began. This allowed version control to be in place from the start and ensured that the project was continuously backed up online.
 
+The repository was set to **public**, making it accessible for deployment and assessment purposes. Once created, it was cloned into VS Code using the HTTPS link rather than setting up Git manually via the terminal.
+
+---
 
 ## Deployment Using GitHub Pages
 
-The website was deployed online using **GitHub Pages**, which allows static websites to be hosted directly from a GitHub repository. The deployment process involved:
+The website was deployed using **GitHub Pages**, which provides hosting for static websites directly from a GitHub repository.
 
-1. Opening the repository settings and navigating to the **Pages** section.  
-2. Selecting the **main branch** as the source branch and the **root folder** as the deployment folder.  
-3. GitHub Pages then generated a live URL for the website: 
+The deployment process involved:
+
+- Opening the repository **Settings**
+- Navigating to the **Pages** section
+- Selecting the **main branch** as the source
+- Setting the deployment folder to the **root directory**
+- Saving the configuration
+
+Once these settings were applied, GitHub Pages automatically generated a live URL for the website. Any future updates pushed to the `main` branch were reflected on the live site after deployment refreshed.
+
+This deployment method ensured the site was easy to update and maintain while providing a reliable public URL for testing and submission.
+
+
 
 
 
@@ -709,10 +735,13 @@ Special attention was given to **quiz logic**, **hazard perception videos**, and
 
 This comprehensive testing process confirmed that all interactive elements function as expected and provide a smooth user experience.
 
-![Validator Screenshots](assets/images/quiz-tes.jpg) 
-![Validator Screenshots](assets/images/quiz-test-two.jpg) 
-![Validator Screenshots](assets/images/accordion-test.jpg) 
-![Validator Screenshots](assets/images/accordion-test-two.jpg) 
+![testing Screenshots](assets/images/quiz-tes.jpg) 
+![testing Screenshots](assets/images/quiz-test-two.jpg) 
+![testing Screenshots](assets/images/accordion-test.jpg) 
+![testing Screenshots](assets/images/accordion-test-two.jpg)  
+![testing Screenshots](assets/images/completed%20-quiz.jpg)  
+![testing Screenshots](assets/images/completed-quiz-hazard.jpg) 
+
 
 
 
@@ -738,6 +767,9 @@ This comprehensive testing process confirmed that all interactive elements funct
 # Jshint Validation Issues
 # JS Code Fixes & Improvements
 
+![Validator Screenshots](assets/images/js-hint-quiz.jpg) 
+
+![Validator Screenshots](assets/images/js-hint-topic.jpg)
 
 - **Accordion Filtering Bug**
   - Previously, filtering topics did not collapse open accordion items.
