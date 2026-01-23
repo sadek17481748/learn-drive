@@ -162,25 +162,6 @@ Key considerations for this audience:
 
 ## Colour Scheme
 
-The Learn Drive website uses a limited but consistent colour palette:
-
-| Purpose | Colour | Hex |
-|----------|--------|-----|
-| Navbar background | Dark Blue | `#1A374D` |
-| Navbar text / buttons | White | `#FFFFFF` |
-| Primary button background | Light Blue | `#4A90E2` |
-| Primary button text | White | `#FFFFFF` |
-| Section headers / titles | Black | `#000000` |
-| Body background | White | `#FFFFFF` |
-| Quiz feedback (correct) | Green | `#28A745` |
-| Quiz feedback (incorrect) | Red | `#DC3545` |
-
-
-
-# Design
-
-## Colour Scheme
-
 Learn Drive uses a consistent, modern colour palette:
 
 | Purpose | Colour | Hex |
@@ -274,174 +255,135 @@ learn-drive
 
 ---
 
-# Development 
+# Development & Deployment Process
 
+## Planning and Initial Design
 
-## Initial Planning
+Before starting development, I created a written plan outlining the purpose of the website and the core functionality it needed to achieve. The aim of the project was to provide learner drivers with a simple and user-friendly platform where they could revise key theory topics, practise quiz questions, and experience a basic hazard perception simulation.
 
-Before starting development, I planned the purpose of the website and its main features. The goal was to create a simple and user-friendly platform where learner drivers could practise for their UK driving theory test.
+Based on my previous project experience, I initially planned to build three main pages, including a quiz page. At this stage, I deliberately kept the scope realistic and focused on achievable functionality rather than overcomplicating the design.
 
-I identified the core sections the website would need:
-- A home page to introduce the website
-- A topics page to revise theory content
-- A quiz page to test knowledge
-- A hazard perception section to simulate real test conditions
-
-I also planned a clear folder structure to keep the project organised, separating HTML files, CSS, JavaScript, images, and videos.
+Once the written plan was complete, I created a wireframe to visualise the layout, navigation flow, and overall user experience. This helped me make early design decisions before writing any code and reduced layout-related changes later in development.
 
 ---
 
-## Project Setup
+## Project Setup and Version Control
 
-The first technical step was creating a **GitHub repository** for version control. This allowed me to track changes throughout development and provided a hosted version of the site using GitHub Pages.
+After finalising the wireframe, I set up the project in Visual Studio Code and created all the files and folders I anticipated needing. I organised the project using a clear folder structure, separating HTML files, CSS, JavaScript, images, and videos to keep the project maintainable.
 
-I then:
-- Cloned the repository to my local machine
-- Opened the project in **Visual Studio Code**
-- Linked the local project to the GitHub repository so changes could be committed and pushed regularly
-
-This ensured the project was backed up and versioned from the start.
+I then connected the project to a GitHub repository using HTTPS. This approach was more stable than my previous method of using the terminal for setup, which had caused several issues in an earlier project. Using HTTPS allowed me to commit and push changes reliably throughout development and ensured my work was backed up from the beginning.
 
 ---
 
-## HTML Development
+## HTML Structure and Responsive Layout
 
-I began development by creating the main structure of the website using `index.html`. This page was used to define:
-- The overall layout
-- Navigation bar
-- Footer
-- General page structure
+Development began with `index.html`, where I built the core structure of the website. Unlike my previous project, I prioritised responsiveness from the very start. Previously, responsiveness was added halfway through development, which became difficult once many images and elements were already in place. Implementing responsiveness early made this process significantly smoother.
 
-Once the home page structure was complete, I created additional HTML pages (`topics.html`, `quiz.html`, etc.) using the same layout. This ensured consistency across the website and reduced duplication of work.
+Once the structure of the home page was complete, I reused the same layout across all other HTML pages (`topics.html`, `quiz.html`, and additional pages). This ensured consistency in navigation, layout, and responsiveness throughout the site.
 
 Each page includes:
 - A fixed navigation bar
 - A main content area
-- A footer with social links
+- A consistent footer with social media links
 
 ---
 
-## CSS Styling and Consistency
+## Styling and Layout Consistency
 
-After setting up the HTML structure, I created an external stylesheet (`style.css`) to manage all custom styling.
+After completing the HTML structure, I created a single external stylesheet (`style.css`) stored in the assets folder. I chose to use one stylesheet for the entire project to ensure consistent styling across all pages and to simplify maintenance.
 
-I:
-- Chose a consistent colour scheme using dark backgrounds and light text
-- Selected fonts to improve readability and hierarchy
-- Applied spacing, hover effects, and transitions
-- Used Flexbox to ensure the footer stays at the bottom of the page
+Bootstrap was used extensively to speed up development and ensure responsive behaviour across different screen sizes. As the project focus was functionality rather than advanced CSS techniques, Bootstrap provided a practical and efficient solution.
 
-All HTML pages were linked to the same stylesheet to ensure consistent styling across the entire site.
-
-Bootstrap was also used alongside custom CSS to speed up layout creation and improve responsiveness.
+Custom CSS was added for:
+- Colour scheme and typography
+- Button styling and hover effects
+- Card and quiz layouts
+- Flexbox layout to ensure the footer remains at the bottom of the page
 
 ---
 
-## JavaScript Development
+## Navigation and Content Implementation
 
-Once the structure and styling were complete, I focused on adding interactivity using JavaScript.
+Once the layout and styling were in place, I completed all navigation links, footer links, and social media icons. I then added the main content to `index.html`, including call-to-action buttons that initially had no functionality.
+
+After confirming the structure worked correctly, I implemented button functionality to allow navigation between pages. This step-by-step approach helped ensure layout and navigation worked before introducing JavaScript logic.
+
+---
+
+## Topics Page Development
+
+For `topics.html`, I initially planned to present content using cards. However, after reviewing similar educational websites, I decided that an accordion layout would be more effective and user-friendly.
+
+I implemented a Bootstrap-based accordion and adapted it to match the site’s design. Additional JavaScript was added to allow users to filter topics by category and mark topics as revised, providing clear visual feedback and improving usability.
+
+---
+
+## JavaScript Development and Interactivity
+
+JavaScript development began after the structure and styling were complete. Initially, JavaScript was placed directly inside HTML files for convenience. As development progressed, I moved scripts into external files once I understood that proper linking provides the same performance benefits while improving code organisation.
 
 ### Quiz Functionality
-I developed a practice quiz system that:
-- Displays multiple-choice questions dynamically
-- Tracks user progress with a progress bar
-- Provides immediate feedback for correct and incorrect answers
-- Calculates and displays the final score
-- Stores results using `localStorage`
 
-### Hazard Perception
-I implemented a hazard perception feature using HTML5 video:
-- Videos are played sequentially
-- User clicks are tracked to measure reaction time
-- Points are awarded based on how quickly hazards are identified
-- Scores are combined with the quiz results to produce a final pass or fail result
+The quiz page followed the same pattern: layout first, functionality second. Buttons were added before logic to ensure the interface was correct.
 
-### Topics Page Interactivity
-On the topics page, I added:
-- A category filter using a dropdown menu
-- A “Mark as Revised” feature
-- Visual feedback to show completed topics
-- Disabled buttons after marking topics as revised
+This stage presented the most challenges. While the quiz logic was inspired by external sources, it required significant adaptation, debugging, and manual testing. Issues included:
+- Quiz results not displaying correctly
+- Buttons not responding
+- Quiz state not resetting correctly on refresh or restart
+
+These issues were resolved through iterative debugging and testing.
+
+### Hazard Perception Integration
+
+Initially, I attempted to develop the quiz logic and hazard perception logic at the same time, which made the code overly complex. To resolve this, I separated the logic and completed the quiz functionality first.
+
+Once the quiz reset function worked correctly, I focused on the hazard perception video logic. Although this logic was also adapted from external examples, integrating both systems required additional testing. Eventually, I implemented a single reset button to reset both the quiz and hazard perception state, simplifying the logic and improving usability.
 
 ---
 
 ## Testing and Debugging
 
-Testing was carried out throughout the development process using **manual testing methods**. This approach allowed issues to be identified and fixed early while features were being built.
+Manual testing was used extensively throughout development, particularly for JavaScript functionality. This involved testing features directly in the browser and observing behaviour in real time.
 
-### Manual Testing Approach
-
-Manual testing was used instead of automated testing due to the size and scope of the project. Each feature was tested directly in the browser to ensure it behaved as expected.
-
-The following actions were tested manually:
+Testing included:
 - Navigation links between pages
-- Page layout and responsiveness
-- Button interactions and hover effects
-- Quiz functionality and scoring
+- Button interactions and hover states
+- Quiz progression, scoring, and resets
 - Hazard perception video playback and scoring
-- Topic filtering and “Mark as Revised” functionality
+- Topic filtering and revision state changes
 
-Screenshots were taken during testing to record:
-- Correct layout and styling
-- Successful quiz completion
-- Hazard perception score output
-- Topic filtering and revised state changes
+I kept detailed development notes using Notepad on my MacBook, documenting bugs, fixes, image and video sources, and code references. This made it easier to track issues and solutions as the project grew.
 
-These screenshots were used as evidence that features worked as intended.
+HTML and CSS issues were minimal, aside from some responsiveness problems with the footer on `index.html`, which were resolved using Flexbox.
 
 ---
 
-### Cross-Browser and Device Testing
+## Validation, Regression, and Cross-Browser Testing
 
-The website was tested on:
+The site was tested using:
 - Google Chrome
 - Safari
 
-Testing included:
-- Desktop screen sizes
-- Tablet and mobile screen widths using browser developer tools
+Testing included desktop, tablet, and mobile screen sizes using browser developer tools. Bootstrap’s responsive grid ensured the layout adapted correctly across devices.
 
-Bootstrap’s responsive grid system ensured that content adjusted correctly across different screen sizes.
-
----
-
-
----
-
-### Validation Testing
-
-HTML and CSS were checked to ensure:
-- Proper nesting of elements
+Validation checks focused on:
+- Correct HTML structure and nesting
 - Consistent styling across pages
-- No broken links or missing assets
+- JavaScript console output
+- Persistence of data using `localStorage`
 
-JavaScript was tested using:
-- Browser console output
-- Step-by-step testing of user interactions
-- Reload testing to confirm `localStorage` data persistence
+After each bug fix, regression testing was performed to ensure existing functionality remained intact.
 
 ---
 
-### Regression Testing
+## Deployment and Reflection
 
-After fixing bugs, regression testing was carried out to ensure:
-- Existing functionality was not broken
-- Styling remained consistent across pages
-- JavaScript features continued to work as expected
+Once development was complete, all notes were transferred into the README file. I intentionally kept notes separate during development due to a previous experience where a README file was accidentally overwritten.
 
-Each time a fix was applied, the affected page was re-tested manually.
+The final version of the site was pushed to GitHub and deployed using GitHub Pages.
 
----
+Overall, this project represents a significant improvement compared to my previous work, particularly in planning, responsiveness, JavaScript debugging, and version control practices. While not all code was written from scratch, substantial effort was required to adapt, test, and debug external code to ensure it functioned correctly within the project. This made the development process a valuable learning experience.
 
-### Final Testing Before Deployment
-
-Before final deployment:
-- All links were tested
-- All quiz questions were completed to verify scoring
-- Hazard perception videos were played fully
-- Topic filters and revision buttons were re-tested
-
-Once confirmed, the final version was pushed to GitHub and deployed using GitHub Pages.
 
 ---
 
@@ -614,9 +556,9 @@ For the Learn Drive project, **manual testing** was chosen because:
 - The site required frequent changes during development
 
 Automated testing would be more suitable if the project were expanded to include user accounts, databases, or complex back-end functionality.
-h
 
-## Bug Tracking & Resolution Log 
+
+
 
 ## Bug Tracking & Resolution Log 
 
@@ -642,18 +584,19 @@ h
 | B18 | Footer not fixed to bottom | Visible gap under footer on short pages | Applied flexbox layout to body/footer | Yes | Viewed page with minimal content |
 | B19 | Duplicate quiz questions | Questions appeared more than once | Cleaned and reviewed question array | Yes | Completed quiz and checked repetitions |
 | B20 | Restart did not reset hazard state | Hazard data persisted after restart | Reset all hazard variables on restart | Yes | Restarted quiz and hazard section |
-| B21 | `<!DOCTYPE html>` inside JS | HTML doctype incorrectly appears inside JS file | Move `<!DOCTYPE html>` to **top of HTML file**, remove from JS | No | Open page and check console for parse errors |
-| B22 | Stray backslash in `<head>` | Extra `\` causes HTML parsing warning | Remove stray `\` character in `<head>` | No | Inspect `<head>` and console warnings |
-| B23 | Hazard video count mismatch | Text shows “Video 1 of 8” but only 3 videos defined | Set total dynamically: `hazardVideos.length` | No | Observe video count in hazard section |
-| B24 | Shadowed `quizScore` variable in hazard function | Local variable overwrites global score causing incorrect total | Remove local redeclaration inside `loadHazardVideo()` | No | Complete quiz + hazard and verify combined score |
-| B25 | Video `<source>` overridden | Video element `<source>` differs from JS `video.src` | Remove `<source>` tag in HTML or update JS to use `<source>` consistently | No | Inspect video element, check network tab |
-| B26 | Progress bar doesn’t reach 100% until result | Progress bar jumps to 100% after final question | Update `updateProgress()` to include last question: `perc = ((quizIndex+1)/quizQuestions.length)*100` | No | Observe progress bar during last question |
-| B27 | Click hazard video before play | Clicking before video start still counts | Add `if(video.paused) return;` at start of click handler | No | Click immediately and observe score |
-| B28 | Duplicate `No honking` question | Same quiz question repeated | Remove duplicates from `quizQuestions` array | No | Scroll through quiz questions |
-| B29 | Missing alt text for images | Some images missing descriptive `alt` attribute | Add descriptive `alt` to all `<img>` in `quizQuestions` | No | Inspect element and check `alt` |
-| B30 | Next button visible after last video | “Next Video” button remains visible when no more videos | Hide button: `nextBtn.style.display = 'none';` at end of hazard array | No | Complete hazard section |
-| B31 | JS console errors on reload | JS runs before DOM fully loaded | Wrap JS in `DOMContentLoaded` event listener | No | Reload page and check console | 
-| B32 | Hazard video auto-plays on page load | Video was set to play automatically when loaded, preventing user control | Removed `video.play()` from `loadHazardVideo()` so playback starts only when user presses play | Yes | Reloaded page and confirmed video remains paused until play is clicked |
+| B21 | `<!DOCTYPE html>` inside JS | HTML doctype incorrectly appears inside JS file | Moved `<!DOCTYPE html>` to top of HTML file and removed from JS | Yes | Opened page and confirmed no console parse errors |
+| B22 | Stray backslash in `<head>` | Extra `\` caused HTML parsing warning | Removed stray character from `<head>` | Yes | Inspected `<head>` and verified clean console |
+| B23 | Hazard video count mismatch | Static count didn’t match actual videos | Set total dynamically using `hazardVideos.length` | Yes | Observed correct video count during playback |
+| B24 | Shadowed `quizScore` variable | Local variable overwrote global score | Removed local redeclaration | Yes | Completed quiz and hazard sections and verified totals |
+| B25 | Video `<source>` overridden | HTML `<source>` conflicted with JS `video.src` | Standardised video source handling | Yes | Inspected video element and network activity |
+| B26 | Progress bar doesn’t reach 100% | Final question not included in calculation | Updated percentage formula | Yes | Observed progress reach 100% on last question |
+| B27 | Click hazard video before play | Early clicks incorrectly counted | Added paused-state guard | Yes | Clicked before play and confirmed no score change |
+| B28 | Duplicate `No honking` question | Question appeared more than once | Removed duplicates from array | Yes | Reviewed full quiz flow |
+| B29 | Missing alt text for images | Images lacked accessibility descriptions | Added descriptive `alt` attributes | Yes | Inspected DOM and validated alt text |
+| B30 | Next button visible after last video | Button remained after final hazard clip | Hid button at end of array | Yes | Completed hazard section |
+| B31 | JS console errors on reload | Script ran before DOM loaded | Wrapped logic in `DOMContentLoaded` | Yes | Reloaded page and checked console |
+| B32 | Hazard video auto-plays on page load | Video played without user input | Removed forced `video.play()` call | Yes | Reloaded page and confirmed manual playback |
+
 
 
 
