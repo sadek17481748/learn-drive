@@ -641,46 +641,82 @@ Automated testing would be more suitable if the project were expanded to include
 * Manual Testing carried out during the devlopment of the process the table validates all the buttons during the project.
 
 
-### Button and Link Functionality
-| Button Name / ID                  | Page / Section                 | Intended Function                                                                 | Actual Function                                                                 |
-|----------------------------------|--------------------------------|---------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| Mark as Revised                   | Topics Accordion (all items)  | Mark a topic as revised to track learning progress                               | Currently adds no visual change or state; requires JS to handle marking        |
-| Road Signs Accordion Button       | Topics                        | Expand/collapse Road Signs content                                              | Works: toggles collapse/expand via Bootstrap                                 |
-| Hazard Perception Accordion Button| Topics                        | Expand/collapse Hazard Perception content                                       | Works: toggles collapse/expand via Bootstrap                                 |
-| Speed Awareness Accordion Button  | Topics                        | Expand/collapse Speed Awareness content                                         | Works: toggles collapse/expand via Bootstrap                                 |
-| Rules & Regulations Accordion Btn | Topics                        | Expand/collapse Rules & Regulations content                                     | Works: toggles collapse/expand via Bootstrap                                 |
-| Alertness Accordion Button        | Topics                        | Expand/collapse Alertness content                                               | Works: toggles collapse/expand via Bootstrap                                 |
-| Attitude Accordion Button         | Topics                        | Expand/collapse Attitude content                                                | Works: toggles collapse/expand via Bootstrap                                 |
-| Essential Documents Accordion Btn | Topics                        | Expand/collapse Essential Documents content                                     | Works: toggles collapse/expand via Bootstrap                                 |
-| Hazard Awareness Accordion Btn    | Topics                        | Expand/collapse Hazard Awareness content                                        | Works: toggles collapse/expand via Bootstrap                                 |
-| Incidents, Accidents & Emerg Btn | Topics                        | Expand/collapse Incidents/Accidents/Emergencies content                         | Works: toggles collapse/expand via Bootstrap                                 |
-| Motorway Rules Accordion Button   | Topics                        | Expand/collapse Motorway Rules content                                          | Works: toggles collapse/expand via Bootstrap                                 |
-| Other Types of Vehicle Accordion  | Topics                        | Expand/collapse Other Vehicles content                                          | Works: toggles collapse/expand via Bootstrap                                 |
-| Road and Traffic Signs Accordion  | Topics                        | Expand/collapse Road & Traffic Signs content                                    | Works: toggles collapse/expand via Bootstrap                                 |
-| Rules of the Road Accordion Btn   | Topics                        | Expand/collapse Rules of the Road content                                       | Works: toggles collapse/expand via Bootstrap                                 |
-| Safety and Your Vehicle Accordion | Topics                        | Expand/collapse Safety & Vehicle content                                        | Works: toggles collapse/expand via Bootstrap                                 |
-| Safety Margins Accordion Button   | Topics                        | Expand/collapse Safety Margins content                                          | Works: toggles collapse/expand via Bootstrap                                 |
-| Vehicle Handling Accordion Btn    | Topics                        | Expand/collapse Vehicle Handling content                                        | Works: toggles collapse/expand via Bootstrap                                 |
-| Vehicle Loading Accordion Btn     | Topics                        | Expand/collapse Vehicle Loading content                                         | Works: toggles collapse/expand via Bootstrap                                 |
-| Vulnerable Road Users Accordion   | Topics                        | Expand/collapse Vulnerable Road Users content                                   | Works: toggles collapse/expand via Bootstrap                                 |
-| Restart Quiz                      | Quiz                           | Restart the practice quiz, reset progress bar and answers                        | Works: calls `restartQuiz()` (assumes JS exists)                              |
-| Next Video                        | Hazard Perception              | Go to the next hazard perception video and update score/count                    | Works if JS attached (`nextHazardBtn`)                                        |
-| Restart Videos                     | Hazard Perception              | Restart the hazard perception videos from the first video                        | Works if JS attached (`restartVideosBtn`)                                      |
-| Restart Both                        | Quiz + Hazard Perception      | Restart both the quiz and hazard perception videos                                | Works if JS attached (`restartBothBtn`)                                        |
-| Home (Navbar)                     | All Pages                     | Navigate to homepage                                                            | Works: links to `index.html`                                                 |
-| Topics (Navbar)                   | All Pages                     | Navigate to topics page                                                         | Works: links to `topics.html`                                                |
-| Quiz (Navbar)                     | All Pages                     | Navigate to quiz page                                                           | Works: links to `quiz.html`                                                  |
-| Facebook Icon                     | Footer                        | Navigate to LearnDrive Facebook page                                            | Works: links to Facebook                                                      |
-| Twitter Icon                       | Footer                        | Navigate to LearnDrive Twitter page                                             | Works: links to Twitter                                                      |
-| Instagram Icon                     | Footer                        | Navigate to LearnDrive Instagram page                                           | Works: links to Instagram                                                    |
-| LinkedIn Icon                      | Footer                        | Navigate to LearnDrive LinkedIn page                                            | Works: links to LinkedIn                                                     |
+### Button and Link Functionality Testing
+
+All interactive elements across the LearnDrive website were tested manually in the browser to ensure correct functionality, accessibility, and consistency across pages. Testing focused on buttons, links, navigation elements, quiz controls, hazard perception video controls, and social media icons.
+
+Each button and link was clicked multiple times under different conditions (initial load, after interaction, after reset, and after page refresh) to confirm expected behaviour.
+
+---
+
+| Button Name / ID                  | Page / Section                 | Intended Function                                                                 | Actual Function & Testing Outcome                                              |
+|----------------------------------|--------------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| Mark as Revised                   | Topics Accordion (all topics) | Mark a topic as revised to track learning progress                               | Works: topic background changes colour, button text updates to “Revised”, button disables after click |
+| Topic Filter Dropdown             | Topics Page                   | Filter topics by category                                                        | Works: topics dynamically show/hide based on selected category                |
+| Road Signs Accordion Button       | Topics                        | Expand/collapse Road Signs content                                               | Works: expands and collapses correctly using Bootstrap                         |
+| Hazard Perception Accordion Btn   | Topics                        | Expand/collapse Hazard Perception content                                        | Works as expected                                                              |
+| Speed Awareness Accordion Btn     | Topics                        | Expand/collapse Speed Awareness content                                          | Works as expected                                                              |
+| Rules & Regulations Accordion Btn | Topics                        | Expand/collapse Rules & Regulations content                                      | Works as expected                                                              |
+| Alertness Accordion Button        | Topics                        | Expand/collapse Alertness content                                                | Works as expected                                                              |
+| Attitude Accordion Button         | Topics                        | Expand/collapse Attitude content                                                 | Works as expected                                                              |
+| Essential Documents Accordion Btn | Topics                        | Expand/collapse Essential Documents content                                      | Works as expected                                                              |
+| Hazard Awareness Accordion Btn    | Topics                        | Expand/collapse Hazard Awareness content                                         | Works as expected                                                              |
+| Incidents & Emergencies Accordion | Topics                        | Expand/collapse Incidents, Accidents & Emergencies content                       | Works as expected                                                              |
+| Motorway Rules Accordion Btn      | Topics                        | Expand/collapse Motorway Rules content                                           | Works as expected                                                              |
+| Other Vehicles Accordion Btn      | Topics                        | Expand/collapse Other Types of Vehicle content                                   | Works as expected                                                              |
+| Road & Traffic Signs Accordion    | Topics                        | Expand/collapse Road and Traffic Signs content                                   | Works as expected                                                              |
+| Rules of the Road Accordion Btn   | Topics                        | Expand/collapse Rules of the Road content                                        | Works as expected                                                              |
+| Safety & Your Vehicle Accordion  | Topics                        | Expand/collapse Safety and Your Vehicle content                                  | Works as expected                                                              |
+| Safety Margins Accordion Btn      | Topics                        | Expand/collapse Safety Margins content                                           | Works as expected                                                              |
+| Vehicle Handling Accordion Btn    | Topics                        | Expand/collapse Vehicle Handling content                                         | Works as expected                                                              |
+| Vehicle Loading Accordion Btn     | Topics                        | Expand/collapse Vehicle Loading content                                          | Works as expected                                                              |
+| Vulnerable Road Users Accordion   | Topics                        | Expand/collapse Vulnerable Road Users content                                    | Works as expected                                                              |
+| Quiz Answer Buttons               | Quiz Page                     | Allow user to select an answer                                                   | Works: registers selection and prevents multiple submissions                  |
+| Quiz Next Button                  | Quiz Page                     | Move to next quiz question                                                       | Works: advances question and updates progress bar                             |
+| Quiz Restart Button               | Quiz Page                     | Reset quiz questions, score, and progress bar                                    | Works: quiz resets fully on click                                              |
+| Hazard Video Play Control         | Hazard Perception             | Allow user to manually start video                                               | Works: video does not auto-play, user control maintained                       |
+| Hazard Video Click Detection      | Hazard Perception             | Register hazard clicks during valid time window                                  | Works: clicks only count when video is playing                                 |
+| Next Video Button                 | Hazard Perception             | Advance to the next hazard perception video                                      | Works: loads next video and updates video count                                |
+| Restart Videos Button             | Hazard Perception             | Restart hazard videos from first video                                           | Works: resets video index and score                                            |
+| Restart Both Button               | Quiz + Hazard Perception      | Reset both quiz and hazard perception together                                   | Works: resets all scores, progress, and state                                  |
+| Home (Navbar Link)                | All Pages                     | Navigate to homepage                                                             | Works: links to `index.html`                                                   |
+| Topics (Navbar Link)              | All Pages                     | Navigate to topics page                                                          | Works: links to `topics.html`                                                  |
+| Quiz (Navbar Link)                | All Pages                     | Navigate to quiz page                                                            | Works: links to `quiz.html`                                                    |
+| Facebook Icon                     | Footer (All Pages)            | Navigate to Facebook                                                             | Works: opens Facebook in new tab                                               |
+| Twitter Icon                      | Footer (All Pages)            | Navigate to Twitter or fallback page                                             | Works: link tested on all pages                                                |
+| Instagram Icon                    | Footer (All Pages)            | Navigate to Instagram                                                            | Works: opens Instagram in new tab                                              |
+| LinkedIn Icon                     | Footer (All Pages)            | Navigate to LinkedIn                                                             | Works: opens LinkedIn in new tab                                               |
+| 404 Page Home Button              | 404 Page                      | Return user to homepage                                                          | Works: navigates back to `index.html`                                          |
+
+---
+
+### Summary of Button and Link Testing
+
+All buttons and links across the website were tested manually to confirm they:
+
+- Perform their intended actions
+- Do not trigger duplicate or unintended behaviour
+- Reset correctly when required
+- Remain functional after page reloads
+- Maintain consistent behaviour across all pages
+
+Special attention was given to **quiz logic**, **hazard perception videos**, and **reset functionality**, as these areas involved more complex JavaScript logic. Social media icons and navigation links were also tested on every page to ensure consistency and prevent broken links.
+
+This comprehensive testing process confirmed that all interactive elements function as expected and provide a smooth user experience.
+
+![Validator Screenshots](assets/images/quiz-tes.jpg) 
+![Validator Screenshots](assets/images/quiz-test-two.jpg) 
+![Validator Screenshots](assets/images/accordion-test.jpg) 
+![Validator Screenshots](assets/images/accordion-test-two.jpg) 
 
 
 
 
 
 
-# Lighthouse Testing
+
+# Lighthouse Testing 
+* Lighthouse testing results were mixed. the functionality of all the pages were sufficient. a particular concern over the results with quiz.html as the performance levels were not as good as i expected. i think the next projext I will carry out lighthouse testing during main copletion of sections rather then at the end of develpment.
 
 ![Validator Screenshots](assets/images/lighthouse-index.jpg) 
 ![Validator Screenshots](assets/images/lighthouse-quiz.jpg) 
