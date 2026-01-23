@@ -682,7 +682,9 @@ Automated testing would be more suitable if the project were expanded to include
 
 # Lighthouse Testing
 
-
+![Validator Screenshots](assets/images/lighthouse-index.jpg) 
+![Validator Screenshots](assets/images/lighthouse-quiz.jpg) 
+![Validator Screenshots](assets/images/topics-screenshot.jpg)
 
 
 
