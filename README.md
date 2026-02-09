@@ -761,6 +761,73 @@ This comprehensive testing process confirmed that all interactive elements funct
 
 
 
+# Responsive  Testing   
+
+In this section details regarding reponsive testing are recoreded. This includes testing  the layout and design across multiple devices and formats.Other tests done were on the navigation, images and media, functionality and orientation  changes. Goole chromes multi device view feature was used to check different device perspectives. Screenshots were used to document and show tests were carried out.  
+
+The first respononsvie tests that were carried out were on a Macbook on googlechrome testing the webpages responsivness in three different states ; full page , mimimize and adjusting the size. The outcome met the expectations as the use of the grid method at early stages of development meant that the webpage adjusted perfectly acroos these states.  
+
+![Responsive Testing  Screenshots](assets/images/responsive-homepage.jpg)   
+
+![Responsive Testing  Screenshots](assets/images/responsive-homepage-minimize.jpg)   
+
+![Responsive Testing  Screenshots](assets/images/responsive-homepage-adjust.jpg)   
+
+![Responsive Testing  Screenshots](assets/images/responsive-topics.jpg)   
+
+![Responsive Testing  Screenshots](assets/images/responsive-topics-minimuze.jpg)   
+
+![Responsive Testing  Screenshots](assets/images/responsive-quiz.jpg)    
+
+![Responsive Testing  Screenshots](assets/images/responsive-quiz-adjust.jpg)   
+
+## Responsive testing -Other devices   
+
+Testing using goolgles multi- device viewing feature was carried out. As with the home page the grid system used helped keepa consistent experience for users when used on a mobile phone. The negatives to the use of the wuiz on a mobile device is that the user woudnt experience it as well as they would on a laptop/computer, that could come down to better design and planning to improve that aspect on a mobile device. 
+ 
+ ### Mobile device 
+ ![Responsive Testing  Screenshots](assets/images/mobile%20screenshot.jpg) 
+ 
+ ![Responsive Testing  Screenshots](assets/images/mobile-screenshot-two.jpg)  
+
+ ![Responsive Testing  Screenshots](assets/images/mobile-screenshot-three.jpg)  
+
+### Tablet   
+ 
+ The tablet preview was also carried out in chrome. In my opinion this was better suited for the layout and design of the website as it allowed you to see more and it was also able to carry out the expected responsivness of laptop and mobile devices. 
+
+![Responsive Testing  Screenshots](assets/images/tablet-responsive.jpg) 
+
+![Responsive Testing  Screenshots](assets/images/tablet-responsive-two.jpg) 
+
+![Responsive Testing  Screenshots](assets/images/tablet-responsove-three.jpg) 
+ 
+
+ ## Buttons 
+
+ Testing was carried out on all buttons as was recorded in the table in the button and functionality section of the read.me file. These inclue the social media Icons ,the navigation bar, the accordion the quiz options and the hazard video clicking features. The test were all carried out on a Macbook in chrome and an iphone 14 for a mobile device. The aim of these tests were to check if the desired outcome was consistent across different devices in which they all were. The testing of the hazard video was a bit more difficult to carry out as i feel as though the settings are a bit hard and screensotting evidence of it working outside of getting the correct moment in the video did cause a few issues. i feel as hough with a bit more time an improvement in the functionality would greatly improve user experience.  
+ 
+ On Topics.html one of the social icons lead to a 404 page as required by the project criteria. This page also had a button that leads the user back to the homepage. 
+ ![Responsive Testing  Screenshots](assets/images/404-test.jpg) 
+ 
+ Also on topics.html the accordion has a feature that allows users to click revise once they are done with the subject. All subjects were checked to make sure the feature worked and that it saved its status. When the refresh button is pressed this feature is not saved and is potentially a feature that should be added in to improve user experience. 
+![Responsive Testing  Screenshots](assets/images/accordion-revise-button.jpg)  
+
+The dropdown menu above the accordion was tested to make sure it allowed the same revise function to work but to alos allow the user to specify a subject if they didnt want to read for all the subjects.
+
+![Responsive Testing  Screenshots](assets/images/dropdown-revise-test.jpg)  
+ 
+ The quizz tetsing was carried out acroos bothe devices the quiz works very well and collates results welland is able to restet to a differnet question when it is reset. Its is also able to track the progress of the user as they move along the quiz. No major issues but some improvements for future implemenattion for example a connected database the website can draw from to ask any question from a pool of questions. No responsive issues noted. 
+ 
+ ![Responsive Testing  Screenshots](assets/images/quiz-buttons.jpg)  
+
+ The refresh both work and reset what they are intended for. 
+ 
+ ![Responsive Testing  Screenshots](assets/images/quiz-restart-buttons.jpg) 
+
+
+
+
 ---
 
 # HTML,CSS Javascript Validation 
@@ -906,7 +973,7 @@ This project combines **Bootstrap** and **Font Awesome** for layout and UI compo
 
 ## References / Inspiration Websites
 
-Here is a list of websites that could have served as inspiration for design, UI, and functionality ideas:
+Here is a list of websites that  have served as inspiration for design, UI, and functionality ideas:
 
 1. [CodeHim](https://codehim.com/) – Multiple-choice quiz examples and tutorials  
 2. [Code Explained](https://www.codeexplained.com/) – JS quiz tutorials and progress bar implementations  
@@ -951,7 +1018,6 @@ The images used in **Learn Drive** are sourced from the following websites:
 * Video was split into three using Macbook internal photo app. The video split and save feature was used to split the video.
 ---
 
-# Additional Notes
 
 
 
